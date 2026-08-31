@@ -220,13 +220,13 @@ main {
 .hero h1 {
     margin: 0;
 
-    font-family: "Rajdhani sans-serif;
+    font-family: "Rajdhani", sans-serif;
 
-    font-size: clamp(55px, 8vw, 112px);
+    font-size: clamp(70px, 10vw, 150px);
 
-    font-weight: 900;
+    font-weight: 700;
 
-    line-height: 0.83;
+    line-height: 0.82;
 
     letter-spacing: -0.025em;
 
