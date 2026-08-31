@@ -1,16 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap');
+
+
+/* =========================================================
+   BLUE LOCK: WORLD CHALLENGE
+   ESTILO PRINCIPAL
+   ========================================================= */
 
 :root {
     --bg: #05080e;
     --bg-light: #080e17;
     --panel: #0b121c;
+
     --blue: #39bfff;
     --blue-light: #8ce5ff;
+
     --white: #f5f8ff;
     --text: #c1cad6;
     --muted: #7f8d9d;
+
     --border: rgba(130, 190, 230, 0.18);
 }
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
 
 * {
     box-sizing: border-box;
@@ -22,9 +36,12 @@ html {
 
 body {
     margin: 0;
+
     background: var(--bg);
     color: var(--white);
+
     font-family: "Inter", Arial, sans-serif;
+
     line-height: 1.6;
 }
 
@@ -34,12 +51,13 @@ a {
 }
 
 
-/* ==============================
+/* =========================================================
    HEADER
-   ============================== */
+   ========================================================= */
 
 .topbar {
     height: 78px;
+
     padding: 0 5.5%;
 
     display: flex;
@@ -51,6 +69,7 @@ a {
     border-bottom: 1px solid var(--border);
 
     position: fixed;
+
     top: 0;
     left: 0;
     right: 0;
@@ -60,14 +79,18 @@ a {
     backdrop-filter: blur(12px);
 }
 
+
+/* LOGO */
+
 .brand {
     display: flex;
     flex-direction: column;
 
     line-height: 0.9;
 
-    font-family: "Rajdhani", sans-serif;
-    font-weight: 900;
+    font-family: "Oswald", sans-serif;
+
+    font-weight: 700;
 
     letter-spacing: 0.04em;
 }
@@ -79,19 +102,29 @@ a {
 .brand small {
     margin-top: 6px;
 
-    font-size: 11px;
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 700;
 
     color: var(--blue);
 
     letter-spacing: 0.2em;
 }
 
+
+/* MENU */
+
 nav {
     display: flex;
+
     align-items: center;
+
     gap: 30px;
 
     font-size: 12px;
+
     font-weight: 700;
 
     letter-spacing: 0.12em;
@@ -99,6 +132,7 @@ nav {
 
 nav a {
     color: #9aa7b7;
+
     transition: 0.2s ease;
 }
 
@@ -108,6 +142,7 @@ nav a:hover {
 
 nav a.active {
     color: white;
+
     position: relative;
 }
 
@@ -129,13 +164,18 @@ nav a.active::after {
 }
 
 
-/* ==============================
-   HERO
-   ============================== */
+/* =========================================================
+   CONTEÚDO
+   ========================================================= */
 
 main {
     width: 100%;
 }
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
 
 .hero {
     position: relative;
@@ -157,6 +197,9 @@ main {
     align-items: flex-end;
 }
 
+
+/* IMAGEM */
+
 .hero-image {
     position: absolute;
 
@@ -171,12 +214,16 @@ main {
     transform: scale(1.02);
 }
 
+
+/* ESCURECIMENTO DA IMAGEM */
+
 .hero-overlay {
     position: absolute;
 
     inset: 0;
 
     background:
+
         linear-gradient(
             90deg,
             rgba(3, 7, 13, 0.98) 0%,
@@ -193,6 +240,9 @@ main {
         );
 }
 
+
+/* CONTEÚDO */
+
 .hero-content {
     position: relative;
 
@@ -203,30 +253,43 @@ main {
     max-width: 900px;
 }
 
+
+/* TEXTO PEQUENO AZUL */
+
 .eyebrow {
     margin: 0 0 12px;
 
     color: var(--blue);
 
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Oswald", sans-serif;
 
     font-size: 13px;
 
-    font-weight: 800;
+    font-weight: 600;
 
     letter-spacing: 0.25em;
 }
 
+
+/* =========================================================
+   TÍTULO PRINCIPAL
+   ========================================================= */
+
 .hero h1 {
     margin: 0;
 
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Oswald", sans-serif;
 
-    font-size: clamp(70px, 10vw, 150px);
+    /*
+       Mesmo nível de presença da primeira versão,
+       sem ficar gigante como a Rajdhani.
+    */
+
+    font-size: clamp(55px, 8vw, 112px);
 
     font-weight: 700;
 
-    line-height: 0.82;
+    line-height: 0.9;
 
     letter-spacing: -0.025em;
 
@@ -235,9 +298,15 @@ main {
     text-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
+
+/* PARTE AZUL */
+
 .hero h1 span {
     color: var(--blue-light);
 }
+
+
+/* DESCRIÇÃO */
 
 .intro {
     max-width: 530px;
@@ -252,9 +321,9 @@ main {
 }
 
 
-/* ==============================
+/* =========================================================
    BOTÕES
-   ============================== */
+   ========================================================= */
 
 .actions {
     display: flex;
@@ -263,6 +332,9 @@ main {
 
     gap: 12px;
 }
+
+
+/* BOTÃO PRINCIPAL */
 
 .primary {
     display: inline-flex;
@@ -294,6 +366,9 @@ main {
     box-shadow: 0 0 32px rgba(57, 191, 255, 0.4);
 }
 
+
+/* BOTÃO SECUNDÁRIO */
+
 .secondary {
     padding: 14px 20px;
 
@@ -317,9 +392,9 @@ main {
 }
 
 
-/* ==============================
+/* =========================================================
    SCROLL
-   ============================== */
+   ========================================================= */
 
 .scroll {
     position: absolute;
@@ -348,9 +423,9 @@ main {
 }
 
 
-/* ==============================
-   CAPÍTULOS
-   ============================== */
+/* =========================================================
+   SEÇÃO DE CAPÍTULOS DA HOME
+   ========================================================= */
 
 .chapters {
     padding: 95px 7%;
@@ -373,11 +448,11 @@ main {
 h2 {
     margin: 0;
 
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Oswald", sans-serif;
 
     font-size: 48px;
 
-    font-weight: 900;
+    font-weight: 700;
 
     line-height: 0.9;
 
@@ -393,6 +468,9 @@ h2 {
 
     letter-spacing: 0.14em;
 }
+
+
+/* CARDS */
 
 .chapter-grid {
     display: grid;
@@ -419,11 +497,12 @@ h2 {
 
     overflow: hidden;
 
-    background: linear-gradient(
-        135deg,
-        #0b121c,
-        #080d15
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #0b121c,
+            #080d15
+        );
 
     border: 1px solid var(--border);
 
@@ -461,11 +540,11 @@ h2 {
 .number {
     color: #1d3448;
 
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Oswald", sans-serif;
 
     font-size: 52px;
 
-    font-weight: 900;
+    font-weight: 700;
 
     line-height: 1;
 }
@@ -473,9 +552,11 @@ h2 {
 .chapter-card strong {
     display: block;
 
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Oswald", sans-serif;
 
     font-size: 22px;
+
+    font-weight: 600;
 
     letter-spacing: 0.04em;
 }
@@ -497,9 +578,9 @@ h2 {
 }
 
 
-/* ==============================
+/* =========================================================
    SOBRE
-   ============================== */
+   ========================================================= */
 
 .about {
     display: grid;
@@ -530,11 +611,11 @@ h2 {
 
     color: #132b3e;
 
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Oswald", sans-serif;
 
     font-size: 75px;
 
-    font-weight: 900;
+    font-weight: 700;
 
     box-shadow:
         inset 0 0 70px rgba(57, 191, 255, 0.04);
@@ -565,9 +646,9 @@ h2 {
 }
 
 
-/* ==============================
+/* =========================================================
    FOOTER
-   ============================== */
+   ========================================================= */
 
 footer {
     display: flex;
@@ -586,9 +667,245 @@ footer {
 }
 
 
-/* ==============================
+/* =========================================================
+   PÁGINA DE CAPÍTULOS
+   ========================================================= */
+
+.chapter-page {
+    padding: 150px 7% 100px;
+
+    min-height: calc(100vh - 78px);
+
+    background:
+
+        radial-gradient(
+            circle at 80% 10%,
+            rgba(57, 191, 255, 0.08),
+            transparent 35%
+        ),
+
+        var(--bg);
+}
+
+
+/* CABEÇALHO */
+
+.chapter-header {
+    max-width: 900px;
+
+    margin-bottom: 65px;
+}
+
+.chapter-header h1 {
+    margin: 0;
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: clamp(55px, 8vw, 110px);
+
+    font-weight: 700;
+
+    line-height: 0.9;
+
+    letter-spacing: -0.02em;
+
+    text-transform: uppercase;
+}
+
+.chapter-header > p:last-child {
+    max-width: 550px;
+
+    margin-top: 25px;
+
+    color: var(--text);
+
+    font-size: 14px;
+}
+
+.chapter-header strong {
+    color: var(--blue-light);
+}
+
+
+/* LISTA */
+
+.chapter-list-page {
+    max-width: 1050px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+/* LINHA */
+
+.chapter-row {
+    position: relative;
+
+    min-height: 125px;
+
+    padding: 20px 28px;
+
+    display: grid;
+
+    grid-template-columns: 110px 1fr 40px;
+
+    align-items: center;
+
+    gap: 25px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            100deg,
+            rgba(11, 20, 31, 0.98),
+            rgba(7, 13, 22, 0.98)
+        );
+
+    border: 1px solid var(--border);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+
+/* BARRA AZUL */
+
+.chapter-row::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+    bottom: 0;
+
+    width: 3px;
+
+    background: var(--blue);
+
+    transform: scaleY(0);
+
+    transform-origin: center;
+
+    transition: 0.2s ease;
+}
+
+
+/* HOVER */
+
+.chapter-row:hover {
+    transform: translateX(6px);
+
+    border-color: rgba(57, 191, 255, 0.45);
+
+    background:
+        linear-gradient(
+            100deg,
+            rgba(12, 27, 41, 1),
+            rgba(7, 14, 23, 1)
+        );
+}
+
+.chapter-row:hover::before {
+    transform: scaleY(1);
+}
+
+
+/* NÚMERO */
+
+.chapter-number {
+    color: #1b3449;
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 70px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    transition: 0.2s ease;
+}
+
+.chapter-row:hover .chapter-number {
+    color: rgba(57, 191, 255, 0.35);
+}
+
+
+/* INFORMAÇÕES */
+
+.chapter-info strong {
+    display: block;
+
+    color: var(--white);
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 27px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.04em;
+}
+
+.chapter-info small {
+    display: block;
+
+    margin-top: 4px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    letter-spacing: 0.04em;
+}
+
+
+/* SETA */
+
+.chapter-arrow {
+    color: var(--blue);
+
+    font-size: 25px;
+
+    transition: 0.2s ease;
+}
+
+.chapter-row:hover .chapter-arrow {
+    transform: translateX(5px);
+}
+
+
+/* CAPÍTULO BLOQUEADO */
+
+.chapter-row.disabled {
+    opacity: 0.42;
+
+    cursor: default;
+}
+
+.chapter-row.disabled:hover {
+    transform: none;
+
+    border-color: var(--border);
+}
+
+.chapter-row.disabled:hover::before {
+    transform: scaleY(0);
+}
+
+
+/* =========================================================
    TABLET / CELULAR
-   ============================== */
+   ========================================================= */
 
 @media (max-width: 800px) {
 
@@ -657,12 +974,49 @@ footer {
 
         gap: 15px;
     }
+
+
+    /* PÁGINA DE CAPÍTULOS */
+
+    .chapter-page {
+        padding: 135px 5% 70px;
+    }
+
+    .chapter-header {
+        margin-bottom: 45px;
+    }
+
+    .chapter-header h1 {
+        font-size: 65px;
+    }
+
+    .chapter-row {
+        min-height: 105px;
+
+        padding: 15px 18px;
+
+        grid-template-columns: 65px 1fr 25px;
+
+        gap: 12px;
+    }
+
+    .chapter-number {
+        font-size: 45px;
+    }
+
+    .chapter-info strong {
+        font-size: 21px;
+    }
+
+    .chapter-arrow {
+        font-size: 20px;
+    }
 }
 
 
-/* ==============================
+/* =========================================================
    CELULARES PEQUENOS
-   ============================== */
+   ========================================================= */
 
 @media (max-width: 500px) {
 
@@ -703,338 +1057,4 @@ footer {
     .number {
         font-size: 43px;
     }
-}
-/* =========================================================
-   PÁGINA DE CAPÍTULOS
-   ========================================================= */
-
-.chapter-page {
-
-    padding: 150px 7% 100px;
-
-    min-height: calc(100vh - 78px);
-
-    background:
-
-        radial-gradient(
-            circle at 80% 10%,
-            rgba(57, 191, 255, 0.08),
-            transparent 35%
-        ),
-
-        var(--bg);
-}
-
-
-/* CABEÇALHO */
-
-.chapter-header {
-
-    max-width: 900px;
-
-    margin-bottom: 65px;
-}
-
-
-.chapter-header h1 {
-
-    margin: 0;
-
-    font-family: "Rajdhani", sans-serif;
-
-    font-size: clamp(65px, 9vw, 120px);
-
-    font-weight: 700;
-
-    line-height: 0.85;
-
-    letter-spacing: -0.02em;
-
-    text-transform: uppercase;
-}
-
-
-.chapter-header > p:last-child {
-
-    max-width: 550px;
-
-    margin-top: 25px;
-
-    color: var(--text);
-
-    font-size: 14px;
-
-}
-
-
-.chapter-header strong {
-
-    color: var(--blue-light);
-}
-
-
-/* LISTA */
-
-.chapter-list-page {
-
-    max-width: 1050px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 12px;
-}
-
-
-/* LINHA */
-
-.chapter-row {
-
-    position: relative;
-
-    min-height: 125px;
-
-    padding: 20px 28px;
-
-    display: grid;
-
-    grid-template-columns: 110px 1fr 40px;
-
-    align-items: center;
-
-    gap: 25px;
-
-    overflow: hidden;
-
-    background:
-
-        linear-gradient(
-            100deg,
-            rgba(11, 20, 31, 0.98),
-            rgba(7, 13, 22, 0.98)
-        );
-
-    border: 1px solid var(--border);
-
-    transition:
-
-        transform 0.2s ease,
-        border-color 0.2s ease,
-        background 0.2s ease;
-}
-
-
-/* LINHA AZUL */
-
-.chapter-row::before {
-
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-
-    top: 0;
-
-    bottom: 0;
-
-    width: 3px;
-
-    background: var(--blue);
-
-    transform: scaleY(0);
-
-    transform-origin: center;
-
-    transition: 0.2s ease;
-}
-
-
-/* HOVER */
-
-.chapter-row:hover {
-
-    transform: translateX(6px);
-
-    border-color:
-
-        rgba(57, 191, 255, 0.45);
-
-    background:
-
-        linear-gradient(
-            100deg,
-            rgba(12, 27, 41, 1),
-            rgba(7, 14, 23, 1)
-        );
-}
-
-
-.chapter-row:hover::before {
-
-    transform: scaleY(1);
-}
-
-
-/* NÚMERO */
-
-.chapter-number {
-
-    color: #1b3449;
-
-    font-family: "Rajdhani", sans-serif;
-
-    font-size: 70px;
-
-    font-weight: 700;
-
-    line-height: 1;
-
-    transition: 0.2s ease;
-}
-
-
-.chapter-row:hover .chapter-number {
-
-    color: rgba(57, 191, 255, 0.35);
-}
-
-
-/* INFORMAÇÕES */
-
-.chapter-info strong {
-
-    display: block;
-
-    color: var(--white);
-
-    font-family: "Rajdhani", sans-serif;
-
-    font-size: 27px;
-
-    font-weight: 700;
-
-    letter-spacing: 0.04em;
-}
-
-
-.chapter-info small {
-
-    display: block;
-
-    margin-top: 4px;
-
-    color: var(--muted);
-
-    font-size: 11px;
-
-    letter-spacing: 0.04em;
-}
-
-
-/* SETA */
-
-.chapter-arrow {
-
-    color: var(--blue);
-
-    font-size: 25px;
-
-    transition: 0.2s ease;
-}
-
-
-.chapter-row:hover .chapter-arrow {
-
-    transform: translateX(5px);
-
-}
-
-
-/* CAPÍTULO BLOQUEADO */
-
-.chapter-row.disabled {
-
-    opacity: 0.42;
-
-    cursor: default;
-
-}
-
-
-.chapter-row.disabled:hover {
-
-    transform: none;
-
-    border-color: var(--border);
-
-}
-
-
-.chapter-row.disabled:hover::before {
-
-    transform: scaleY(0);
-
-}
-
-
-/* CELULAR */
-
-@media (max-width: 700px) {
-
-    .chapter-page {
-
-        padding: 135px 5% 70px;
-
-    }
-
-
-    .chapter-header {
-
-        margin-bottom: 45px;
-
-    }
-
-
-    .chapter-header h1 {
-
-        font-size: 65px;
-
-    }
-
-
-    .chapter-row {
-
-        min-height: 105px;
-
-        padding: 15px 18px;
-
-        grid-template-columns: 65px 1fr 25px;
-
-        gap: 12px;
-
-    }
-
-
-    .chapter-number {
-
-        font-size: 45px;
-
-    }
-
-
-    .chapter-info strong {
-
-        font-size: 21px;
-
-    }
-
-
-    .chapter-arrow {
-
-        font-size: 20px;
-
-    }
-
 }
