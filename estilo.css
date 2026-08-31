@@ -1870,3 +1870,468 @@ footer {
         padding: 11px 14px;
     }
 }
+/* =========================================================
+   PÁGINA SOBRE
+   ========================================================= */
+
+.about-page {
+    min-height: calc(100vh - 78px);
+
+    padding: 150px 7% 100px;
+
+    background:
+        radial-gradient(
+            circle at 85% 10%,
+            rgba(57, 191, 255, 0.10),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 15% 75%,
+            rgba(57, 191, 255, 0.04),
+            transparent 30%
+        ),
+
+        var(--bg);
+}
+
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
+.about-header {
+    max-width: 900px;
+
+    margin-bottom: 75px;
+}
+
+
+.about-header h1 {
+    margin: 0;
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: clamp(55px, 8vw, 110px);
+
+    font-weight: 700;
+
+    line-height: 0.9;
+
+    letter-spacing: -0.02em;
+
+    text-transform: uppercase;
+}
+
+
+.about-header h1 span {
+    color: var(--blue-light);
+}
+
+
+.about-header p:last-child {
+    max-width: 620px;
+
+    margin-top: 25px;
+
+    color: var(--text);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   BLOCO PRINCIPAL
+   ========================================================= */
+
+.about-main {
+    max-width: 1050px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 280px;
+
+    gap: 70px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   TEXTO
+   ========================================================= */
+
+.about-content {
+    max-width: 700px;
+}
+
+
+.about-content h2 {
+    margin: 0 0 22px;
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 38px;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    text-transform: uppercase;
+}
+
+
+.about-content h2 span {
+    color: var(--blue-light);
+}
+
+
+.about-content p {
+    margin: 0 0 20px;
+
+    color: #aeb9c7;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   CARTÃO LATERAL
+   ========================================================= */
+
+.about-card {
+    position: relative;
+
+    min-height: 280px;
+
+    padding: 28px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(11, 20, 31, 0.98),
+            rgba(6, 12, 20, 0.98)
+        );
+
+    border: 1px solid var(--border);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+
+.about-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 3px;
+
+    background: var(--blue);
+}
+
+
+.about-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    right: -120px;
+    top: -120px;
+
+    border-radius: 50%;
+
+    background: rgba(57, 191, 255, 0.06);
+}
+
+
+.about-card-label {
+    position: relative;
+
+    z-index: 2;
+
+    color: var(--blue);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.2em;
+}
+
+
+.about-card h3 {
+    position: relative;
+
+    z-index: 2;
+
+    margin: 15px 0 10px;
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 34px;
+
+    font-weight: 600;
+
+    line-height: 0.95;
+
+    text-transform: uppercase;
+}
+
+
+.about-card p {
+    position: relative;
+
+    z-index: 2;
+
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   LINHA DIVISÓRIA
+   ========================================================= */
+
+.about-divider {
+    max-width: 1050px;
+
+    margin: 80px 0 55px;
+
+    border-top: 1px solid var(--border);
+}
+
+
+/* =========================================================
+   CRÉDITOS
+   ========================================================= */
+
+.about-credits {
+    max-width: 1050px;
+}
+
+
+.about-credits .eyebrow {
+    margin-bottom: 12px;
+}
+
+
+.about-credits h2 {
+    margin: 0 0 30px;
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 42px;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    text-transform: uppercase;
+}
+
+
+.credits-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+}
+
+
+.credit-card {
+    padding: 25px;
+
+    min-height: 130px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b121c,
+            #080d15
+        );
+
+    border: 1px solid var(--border);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.credit-card:hover {
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(57, 191, 255, 0.45);
+}
+
+
+.credit-card span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--blue);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+}
+
+
+.credit-card strong {
+    display: block;
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 23px;
+
+    font-weight: 600;
+}
+
+
+.credit-card small {
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   AVISO FAN MADE
+   ========================================================= */
+
+.about-notice {
+    max-width: 1050px;
+
+    margin-top: 55px;
+
+    padding: 22px 25px;
+
+    background: rgba(57, 191, 255, 0.035);
+
+    border-left: 3px solid var(--blue);
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+.about-notice strong {
+    color: var(--white);
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .about-page {
+        padding: 135px 5% 70px;
+    }
+
+
+    .about-header {
+        margin-bottom: 50px;
+    }
+
+
+    .about-header h1 {
+        font-size: 65px;
+    }
+
+
+    .about-main {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .about-content h2 {
+        font-size: 32px;
+    }
+
+
+    .about-card {
+        min-height: 220px;
+    }
+
+
+    .about-divider {
+        margin: 60px 0 40px;
+    }
+
+
+    .about-credits h2 {
+        font-size: 36px;
+    }
+
+
+    .credits-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   CELULAR PEQUENO
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+    .about-header h1 {
+        font-size: 55px;
+    }
+
+
+    .about-header p:last-child {
+        font-size: 13px;
+    }
+
+
+    .about-card {
+        padding: 22px;
+    }
+
+
+    .about-card h3 {
+        font-size: 29px;
+    }
+
+
+    .about-content p {
+        font-size: 13px;
+    }
+}
