@@ -704,3 +704,337 @@ footer {
         font-size: 43px;
     }
 }
+/* =========================================================
+   PÁGINA DE CAPÍTULOS
+   ========================================================= */
+
+.chapter-page {
+
+    padding: 150px 7% 100px;
+
+    min-height: calc(100vh - 78px);
+
+    background:
+
+        radial-gradient(
+            circle at 80% 10%,
+            rgba(57, 191, 255, 0.08),
+            transparent 35%
+        ),
+
+        var(--bg);
+}
+
+
+/* CABEÇALHO */
+
+.chapter-header {
+
+    max-width: 900px;
+
+    margin-bottom: 65px;
+}
+
+
+.chapter-header h1 {
+
+    margin: 0;
+
+    font-family: "Rajdhani", sans-serif;
+
+    font-size: clamp(65px, 9vw, 120px);
+
+    font-weight: 700;
+
+    line-height: 0.85;
+
+    letter-spacing: -0.02em;
+
+    text-transform: uppercase;
+}
+
+
+.chapter-header > p:last-child {
+
+    max-width: 550px;
+
+    margin-top: 25px;
+
+    color: var(--text);
+
+    font-size: 14px;
+
+}
+
+
+.chapter-header strong {
+
+    color: var(--blue-light);
+}
+
+
+/* LISTA */
+
+.chapter-list-page {
+
+    max-width: 1050px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+/* LINHA */
+
+.chapter-row {
+
+    position: relative;
+
+    min-height: 125px;
+
+    padding: 20px 28px;
+
+    display: grid;
+
+    grid-template-columns: 110px 1fr 40px;
+
+    align-items: center;
+
+    gap: 25px;
+
+    overflow: hidden;
+
+    background:
+
+        linear-gradient(
+            100deg,
+            rgba(11, 20, 31, 0.98),
+            rgba(7, 13, 22, 0.98)
+        );
+
+    border: 1px solid var(--border);
+
+    transition:
+
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+
+/* LINHA AZUL */
+
+.chapter-row::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    bottom: 0;
+
+    width: 3px;
+
+    background: var(--blue);
+
+    transform: scaleY(0);
+
+    transform-origin: center;
+
+    transition: 0.2s ease;
+}
+
+
+/* HOVER */
+
+.chapter-row:hover {
+
+    transform: translateX(6px);
+
+    border-color:
+
+        rgba(57, 191, 255, 0.45);
+
+    background:
+
+        linear-gradient(
+            100deg,
+            rgba(12, 27, 41, 1),
+            rgba(7, 14, 23, 1)
+        );
+}
+
+
+.chapter-row:hover::before {
+
+    transform: scaleY(1);
+}
+
+
+/* NÚMERO */
+
+.chapter-number {
+
+    color: #1b3449;
+
+    font-family: "Rajdhani", sans-serif;
+
+    font-size: 70px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    transition: 0.2s ease;
+}
+
+
+.chapter-row:hover .chapter-number {
+
+    color: rgba(57, 191, 255, 0.35);
+}
+
+
+/* INFORMAÇÕES */
+
+.chapter-info strong {
+
+    display: block;
+
+    color: var(--white);
+
+    font-family: "Rajdhani", sans-serif;
+
+    font-size: 27px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.04em;
+}
+
+
+.chapter-info small {
+
+    display: block;
+
+    margin-top: 4px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    letter-spacing: 0.04em;
+}
+
+
+/* SETA */
+
+.chapter-arrow {
+
+    color: var(--blue);
+
+    font-size: 25px;
+
+    transition: 0.2s ease;
+}
+
+
+.chapter-row:hover .chapter-arrow {
+
+    transform: translateX(5px);
+
+}
+
+
+/* CAPÍTULO BLOQUEADO */
+
+.chapter-row.disabled {
+
+    opacity: 0.42;
+
+    cursor: default;
+
+}
+
+
+.chapter-row.disabled:hover {
+
+    transform: none;
+
+    border-color: var(--border);
+
+}
+
+
+.chapter-row.disabled:hover::before {
+
+    transform: scaleY(0);
+
+}
+
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+    .chapter-page {
+
+        padding: 135px 5% 70px;
+
+    }
+
+
+    .chapter-header {
+
+        margin-bottom: 45px;
+
+    }
+
+
+    .chapter-header h1 {
+
+        font-size: 65px;
+
+    }
+
+
+    .chapter-row {
+
+        min-height: 105px;
+
+        padding: 15px 18px;
+
+        grid-template-columns: 65px 1fr 25px;
+
+        gap: 12px;
+
+    }
+
+
+    .chapter-number {
+
+        font-size: 45px;
+
+    }
+
+
+    .chapter-info strong {
+
+        font-size: 21px;
+
+    }
+
+
+    .chapter-arrow {
+
+        font-size: 20px;
+
+    }
+
+}
