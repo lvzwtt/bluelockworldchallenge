@@ -1058,3 +1058,389 @@ footer {
         font-size: 43px;
     }
 }
+/* =========================================================
+   PÁGINA DE REDES
+   ========================================================= */
+
+.social-page {
+
+    min-height: calc(100vh - 78px);
+
+    padding: 150px 7% 100px;
+
+    background:
+
+        radial-gradient(
+            circle at 85% 10%,
+            rgba(57, 191, 255, 0.10),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 10% 70%,
+            rgba(57, 191, 255, 0.04),
+            transparent 30%
+        ),
+
+        var(--bg);
+}
+
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
+.social-header {
+
+    max-width: 800px;
+
+    margin-bottom: 65px;
+}
+
+.social-header h1 {
+
+    margin: 0;
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: clamp(55px, 8vw, 110px);
+
+    font-weight: 700;
+
+    line-height: 0.9;
+
+    letter-spacing: -0.02em;
+
+    text-transform: uppercase;
+}
+
+.social-header p:last-child {
+
+    max-width: 550px;
+
+    margin-top: 25px;
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.social-grid {
+
+    max-width: 1050px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 14px;
+}
+
+
+.social-card {
+
+    position: relative;
+
+    min-height: 190px;
+
+    padding: 30px;
+
+    display: grid;
+
+    grid-template-columns: 70px 1fr 30px;
+
+    align-items: center;
+
+    gap: 20px;
+
+    overflow: hidden;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(11, 20, 31, 0.98),
+            rgba(6, 12, 20, 0.98)
+        );
+
+    border: 1px solid var(--border);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* BRILHO */
+
+.social-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+
+    height: 250px;
+
+    right: -130px;
+
+    top: -130px;
+
+    background: rgba(57, 191, 255, 0.06);
+
+    border-radius: 50%;
+
+    transition: 0.3s ease;
+}
+
+
+/* HOVER */
+
+.social-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color:
+
+        rgba(57, 191, 255, 0.5);
+
+    box-shadow:
+
+        0 15px 50px rgba(0, 0, 0, 0.3);
+}
+
+.social-card:hover::after {
+
+    transform: scale(1.5);
+
+}
+
+
+/* =========================================================
+   ÍCONE
+   ========================================================= */
+
+.social-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    display: grid;
+
+    place-items: center;
+
+    border: 1px solid rgba(57, 191, 255, 0.25);
+
+    background: rgba(57, 191, 255, 0.04);
+
+    color: var(--blue-light);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 27px;
+
+    font-weight: 400;
+
+    transition: 0.25s ease;
+}
+
+
+.social-card:hover .social-icon {
+
+    background: rgba(57, 191, 255, 0.12);
+
+    border-color: var(--blue);
+
+    box-shadow:
+
+        0 0 25px rgba(57, 191, 255, 0.15);
+}
+
+
+/* =========================================================
+   TEXTO
+   ========================================================= */
+
+.social-info {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.social-info span {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--blue);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+}
+
+
+.social-info strong {
+
+    display: block;
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 27px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.02em;
+}
+
+
+.social-info small {
+
+    display: block;
+
+    margin-top: 7px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   SETA
+   ========================================================= */
+
+.social-arrow {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: var(--blue);
+
+    font-size: 25px;
+
+    transition: 0.25s ease;
+}
+
+
+.social-card:hover .social-arrow {
+
+    transform: translate(4px, -4px);
+
+}
+
+
+/* =========================================================
+   BLOCO FINAL
+   ========================================================= */
+
+.social-footer {
+
+    max-width: 1050px;
+
+    margin-top: 70px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid var(--border);
+}
+
+
+.social-footer span {
+
+    color: var(--blue);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.2em;
+}
+
+
+.social-footer p {
+
+    max-width: 600px;
+
+    margin-top: 12px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .social-page {
+
+        padding: 135px 5% 70px;
+    }
+
+
+    .social-header {
+
+        margin-bottom: 45px;
+    }
+
+
+    .social-header h1 {
+
+        font-size: 65px;
+    }
+
+
+    .social-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .social-card {
+
+        min-height: 150px;
+
+        padding: 22px;
+
+        grid-template-columns: 55px 1fr 25px;
+
+        gap: 15px;
+    }
+
+
+    .social-icon {
+
+        width: 52px;
+
+        height: 52px;
+
+        font-size: 22px;
+    }
+
+
+    .social-info strong {
+
+        font-size: 23px;
+    }
+
+}
