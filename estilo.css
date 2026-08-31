@@ -208,7 +208,7 @@ main {
 
     color: var(--blue);
 
-    font-family: "Barlow Condensed", sans-serif;
+    font-family: "Rajdhani", sans-serif;
 
     font-size: 13px;
 
@@ -220,7 +220,7 @@ main {
 .hero h1 {
     margin: 0;
 
-    font-family: "Barlow Condensed", sans-serif;
+    font-family: "Rajdhani sans-serif;
 
     font-size: clamp(55px, 8vw, 112px);
 
@@ -373,7 +373,7 @@ main {
 h2 {
     margin: 0;
 
-    font-family: "Barlow Condensed", sans-serif;
+    font-family: "Rajdhani", sans-serif;
 
     font-size: 48px;
 
@@ -461,7 +461,7 @@ h2 {
 .number {
     color: #1d3448;
 
-    font-family: "Barlow Condensed", sans-serif;
+    font-family: "Rajdhani", sans-serif;
 
     font-size: 52px;
 
@@ -473,7 +473,7 @@ h2 {
 .chapter-card strong {
     display: block;
 
-    font-family: "Barlow Condensed", sans-serif;
+    font-family: "Rajdhani", sans-serif;
 
     font-size: 22px;
 
@@ -530,7 +530,7 @@ h2 {
 
     color: #132b3e;
 
-    font-family: "Barlow Condensed", sans-serif;
+    font-family: "Rajdhani", sans-serif;
 
     font-size: 75px;
 
