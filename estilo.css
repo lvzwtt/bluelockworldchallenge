@@ -2665,3 +2665,590 @@ footer {
         padding: 20px;
     }
 }
+/* =========================================================
+   LEITOR DE CAPÍTULO
+   ========================================================= */
+
+.reader-page {
+    background: #05080e;
+}
+
+
+/* ==============================
+   ÁREA PRINCIPAL
+   ============================== */
+
+.reader {
+    width: 100%;
+    padding-top: 78px;
+}
+
+
+/* ==============================
+   CABEÇALHO
+   ============================== */
+
+.reader-header {
+    padding: 110px 7% 55px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(57, 191, 255, 0.10),
+            transparent 45%
+        ),
+
+        #05080e;
+}
+
+
+.reader-header .eyebrow {
+    margin-bottom: 14px;
+
+    color: var(--blue);
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.25em;
+}
+
+
+.reader-header h1 {
+    margin: 0;
+
+    color: var(--white);
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: clamp(55px, 8vw, 105px);
+
+    font-weight: 600;
+
+    line-height: 0.9;
+
+    letter-spacing: -0.02em;
+
+    text-transform: uppercase;
+}
+
+
+.chapter-title {
+    margin: 20px 0 0;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* ==============================
+   NAVEGAÇÃO
+   ============================== */
+
+.reader-navigation {
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 22px 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-top: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+
+    background: #070c13;
+}
+
+
+.reader-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 42px;
+
+    padding: 0 18px;
+
+    border: 1px solid rgba(130, 190, 230, 0.25);
+
+    background: rgba(8, 16, 25, 0.8);
+
+    color: var(--white);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    transition: 0.2s ease;
+}
+
+
+.reader-button:hover {
+    border-color: var(--blue);
+
+    color: var(--blue-light);
+
+    transform: translateY(-2px);
+}
+
+
+.reader-counter {
+    color: var(--muted);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+}
+
+
+.disabled-button {
+    opacity: 0.35;
+
+    cursor: default;
+
+    pointer-events: none;
+}
+
+
+/* ==============================
+   PÁGINAS DO MANGÁ
+   ============================== */
+
+.manga-pages {
+    width: 100%;
+
+    margin: 0;
+
+    padding: 0;
+
+    background: #050505;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+.manga-pages img {
+    display: block;
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    height: auto;
+
+    margin: 0;
+
+    padding: 0;
+
+    border: 0;
+}
+
+
+/* ==============================
+   NAVEGAÇÃO FINAL
+   ============================== */
+
+.bottom-navigation {
+    margin-top: 0;
+
+    border-top: 1px solid var(--border);
+}
+
+
+/* ==============================
+   COMUNIDADE
+   ============================== */
+
+.community-section {
+    width: 100%;
+
+    padding: 110px 7% 120px;
+
+    background:
+
+        radial-gradient(
+            circle at 15% 30%,
+            rgba(57, 191, 255, 0.08),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            180deg,
+            #080e17,
+            #05080e
+        );
+
+    border-top: 1px solid var(--border);
+}
+
+
+.community-section .eyebrow {
+    margin: 0 0 14px;
+
+    color: var(--blue);
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.25em;
+}
+
+
+.community-section h2 {
+    margin: 0;
+
+    color: var(--white);
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: clamp(45px, 6vw, 82px);
+
+    font-weight: 600;
+
+    line-height: 0.9;
+
+    letter-spacing: -0.015em;
+}
+
+
+.community-text {
+    max-width: 600px;
+
+    margin: 25px 0 45px;
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+.community-text strong {
+    color: var(--blue-light);
+}
+
+
+/* ==============================
+   CARDS DA COMUNIDADE
+   ============================== */
+
+.community-cards {
+    max-width: 1050px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 14px;
+}
+
+
+.community-card {
+    position: relative;
+
+    min-height: 135px;
+
+    padding: 22px 24px;
+
+    display: grid;
+
+    grid-template-columns: 58px 1fr 25px;
+
+    align-items: center;
+
+    gap: 18px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(11, 20, 31, 0.98),
+            rgba(7, 13, 22, 0.98)
+        );
+
+    border: 1px solid var(--border);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.community-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 3px;
+
+    background: var(--blue);
+
+    transform: scaleY(0);
+
+    transition: 0.2s ease;
+}
+
+
+.community-card:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(57, 191, 255, 0.45);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(12, 27, 41, 1),
+            rgba(7, 14, 23, 1)
+        );
+}
+
+
+.community-card:hover::before {
+    transform: scaleY(1);
+}
+
+
+/* ÍCONE */
+
+.community-icon {
+    width: 58px;
+
+    height: 58px;
+
+    display: grid;
+
+    place-items: center;
+
+    border: 1px solid rgba(57, 191, 255, 0.30);
+
+    background: rgba(57, 191, 255, 0.05);
+
+    color: var(--blue-light);
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.05em;
+}
+
+
+/* TEXTO */
+
+.community-info {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.community-label {
+    margin-bottom: 4px;
+
+    color: var(--blue);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+}
+
+
+.community-info strong {
+    color: var(--white);
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 25px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.03em;
+}
+
+
+.community-info small {
+    max-width: 320px;
+
+    margin-top: 5px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+/* SETA */
+
+.community-arrow {
+    color: var(--blue);
+
+    font-size: 22px;
+
+    transition: 0.2s ease;
+}
+
+
+.community-card:hover .community-arrow {
+    transform: translateX(5px);
+}
+
+
+/* ==============================
+   RESPONSIVO
+   ============================== */
+
+@media (max-width: 800px) {
+
+    .reader {
+        padding-top: 104px;
+    }
+
+
+    .reader-header {
+        padding: 80px 6% 45px;
+    }
+
+
+    .reader-navigation {
+        padding: 18px 5%;
+
+        flex-wrap: wrap;
+    }
+
+
+    .reader-counter {
+        order: 3;
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .community-section {
+        padding: 80px 6% 90px;
+    }
+
+
+    .community-cards {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .reader-header {
+        padding-top: 65px;
+    }
+
+
+    .reader-header h1 {
+        font-size: 52px;
+    }
+
+
+    .chapter-title {
+        font-size: 12px;
+    }
+
+
+    .reader-navigation {
+        gap: 10px;
+    }
+
+
+    .reader-button {
+        min-height: 38px;
+
+        padding: 0 12px;
+
+        font-size: 9px;
+    }
+
+
+    .community-section h2 {
+        font-size: 45px;
+    }
+
+
+    .community-text {
+        font-size: 13px;
+    }
+
+
+    .community-card {
+        min-height: 120px;
+
+        padding: 18px;
+
+        grid-template-columns: 48px 1fr 20px;
+
+        gap: 13px;
+    }
+
+
+    .community-icon {
+        width: 48px;
+
+        height: 48px;
+
+        font-size: 15px;
+    }
+
+
+    .community-info strong {
+        font-size: 21px;
+    }
+
+
+    .community-info small {
+        font-size: 10px;
+    }
+
+}
