@@ -2335,3 +2335,333 @@ footer {
         font-size: 13px;
     }
 }
+/* =========================================================
+   LEITOR DE CAPÍTULO
+========================================================= */
+
+.reader-page {
+    background: #ffffff;
+    color: #080b10;
+}
+
+
+/* HEADER DO SITE */
+
+.reader-page .topbar {
+    background: rgba(5, 8, 14, 0.97);
+}
+
+
+/* ÁREA PRINCIPAL */
+
+.reader {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 125px 0 0;
+}
+
+
+/* =========================================================
+   CABEÇALHO DO CAPÍTULO
+========================================================= */
+
+.reader-header {
+    width: 100%;
+    padding: 55px 20px 35px;
+
+    text-align: center;
+
+    background: #ffffff;
+}
+
+.reader-header .eyebrow {
+    margin: 0 0 10px;
+
+    color: #159bd3;
+
+    font-family: "Oswald", Arial, sans-serif;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.2em;
+}
+
+.reader-header h1 {
+    margin: 0;
+
+    color: #080b10;
+
+    font-family: "Oswald", Arial, sans-serif;
+
+    font-size: clamp(42px, 6vw, 72px);
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: 0.02em;
+
+    text-transform: uppercase;
+}
+
+.chapter-title {
+    margin: 12px 0 0;
+
+    color: #68717c;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   BOTÕES
+========================================================= */
+
+.reader-navigation {
+    width: 100%;
+
+    padding: 20px 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    background: #f4f6f8;
+
+    border-top: 1px solid #dfe4e8;
+    border-bottom: 1px solid #dfe4e8;
+}
+
+.reader-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+
+    padding: 12px 20px;
+
+    background: #080b10;
+
+    color: #ffffff;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+.reader-button:hover {
+    background: #39bfff;
+
+    color: #031018;
+
+    transform: translateY(-2px);
+}
+
+.reader-button.next {
+    background: #39bfff;
+
+    color: #031018;
+}
+
+.reader-button.next:hover {
+    background: #080b10;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   PÁGINAS DO MANGÁ
+========================================================= */
+
+.manga-pages {
+    width: 100%;
+
+    margin: 0;
+
+    padding: 0;
+
+    background: #ffffff;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* CADA PÁGINA */
+
+.manga-pages img {
+    display: block;
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    height: auto;
+
+    margin: 0 auto;
+
+    padding: 0;
+
+    border: 0;
+
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   NAVEGAÇÃO FINAL
+========================================================= */
+
+.bottom-navigation {
+    margin-top: 0;
+}
+
+
+/* =========================================================
+   COMENTÁRIOS
+========================================================= */
+
+.comments-section {
+    width: 100%;
+
+    padding: 90px 7% 110px;
+
+    background: #080b10;
+
+    color: #ffffff;
+
+    border-top: 1px solid #202832;
+}
+
+.comments-section .eyebrow {
+    margin-bottom: 10px;
+
+    color: #39bfff;
+
+    font-family: "Oswald", Arial, sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.2em;
+}
+
+.comments-section h2 {
+    margin: 0 0 25px;
+
+    color: #ffffff;
+
+    font-family: "Oswald", Arial, sans-serif;
+
+    font-size: clamp(40px, 6vw, 70px);
+
+    font-weight: 700;
+
+    line-height: 0.95;
+
+    text-transform: uppercase;
+}
+
+.comments-placeholder {
+    max-width: 750px;
+
+    padding: 30px;
+
+    background: #0d131b;
+
+    border: 1px solid rgba(130, 190, 230, 0.18);
+}
+
+.comments-placeholder p {
+    margin: 0 0 8px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+.comments-placeholder span {
+    color: #7f8d9d;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   FOOTER DO LEITOR
+========================================================= */
+
+.reader-page footer {
+    background: #05080e;
+
+    color: #627081;
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .reader {
+        padding-top: 120px;
+    }
+
+    .reader-header {
+        padding: 40px 15px 30px;
+    }
+
+    .reader-header h1 {
+        font-size: 42px;
+    }
+
+    .reader-navigation {
+        padding: 15px 5%;
+
+        gap: 8px;
+    }
+
+    .reader-button {
+        padding: 10px 13px;
+
+        font-size: 9px;
+    }
+
+    .manga-pages img {
+        width: 100%;
+    }
+
+    .comments-section {
+        padding: 65px 5% 80px;
+    }
+
+    .comments-placeholder {
+        padding: 20px;
+    }
+}
