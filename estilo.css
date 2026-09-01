@@ -4753,3 +4753,86 @@ footer {
     }
 
 }
+/* =========================================================
+   FOTO DO DISCORD — SUPORTE DO SITE
+========================================================= */
+
+.discord-profile-icon {
+    width: 60px;
+    height: 60px;
+
+    min-width: 60px;
+    min-height: 60px;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #12a8ff;
+
+    box-sizing: border-box;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+.discord-profile-icon img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   GARANTE QUE O ÍCONE NÃO QUEBRE O ALINHAMENTO
+========================================================= */
+
+.support-card .support-icon {
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   FOTO DO INSTAGRAM
+========================================================= */
+
+.instagram-icon {
+    padding: 0;
+
+    overflow: hidden;
+}
+
+
+.instagram-icon img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   AJUSTE MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .discord-profile-icon {
+        width: 56px;
+        height: 56px;
+
+        min-width: 56px;
+        min-height: 56px;
+    }
+
+}
