@@ -214,8 +214,7 @@
 
         <form
             class="donation-form"
-            action="#"
-            method="post"
+            id="donationForm"
         >
 
 
@@ -247,6 +246,7 @@
                         min="0"
                         step="0.01"
                         placeholder="0,00"
+                        required
                     >
 
 
@@ -326,7 +326,7 @@
 
             <!-- =================================================
                  BOTÃO
-                 ================================================== -->
+                 ================================================= -->
 
 
             <button
@@ -341,6 +341,89 @@
 
 
         </form>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PAGAMENTO PIX
+         ===================================================== -->
+
+
+    <section
+        class="donation-pix"
+        id="pixSection"
+        style="display: none;"
+    >
+
+
+        <div class="donation-form-header">
+
+
+            <p class="eyebrow">
+                CONTRIBUIÇÃO
+            </p>
+
+
+            <h2>
+                PAGAMENTO<br>
+                <span>PIX</span>
+            </h2>
+
+
+            <p>
+                Copie a chave Pix abaixo e faça o pagamento
+                pelo aplicativo do seu banco.
+            </p>
+
+
+        </div>
+
+
+
+        <div class="pix-card">
+
+
+            <span class="social-label">
+                CHAVE PIX
+            </span>
+
+
+            <div class="pix-key-box">
+
+
+                <span id="pixKey">
+                    SUA-CHAVE-PIX-AQUI
+                </span>
+
+
+            </div>
+
+
+
+            <button
+                type="button"
+                class="primary donation-button"
+                id="copyPixButton"
+            >
+
+                COPIAR CHAVE PIX
+                <b>⧉</b>
+
+            </button>
+
+
+            <p
+                id="copyMessage"
+                style="display: none;"
+            >
+                Chave Pix copiada!
+            </p>
+
+
+        </div>
 
 
     </section>
@@ -401,6 +484,64 @@
 
 </footer>
 
+
+
+<script>
+
+const donationForm = document.getElementById("donationForm");
+
+const pixSection = document.getElementById("pixSection");
+
+const copyPixButton = document.getElementById("copyPixButton");
+
+const pixKey = document.getElementById("pixKey");
+
+const copyMessage = document.getElementById("copyMessage");
+
+
+donationForm.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    pixSection.style.display = "block";
+
+    pixSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+});
+
+
+copyPixButton.addEventListener("click", async function() {
+
+    const key = pixKey.textContent.trim();
+
+    try {
+
+        await navigator.clipboard.writeText(key);
+
+        copyMessage.style.display = "block";
+
+        copyPixButton.innerHTML = "CHAVE COPIADA <b>✓</b>";
+
+        setTimeout(function() {
+
+            copyMessage.style.display = "none";
+
+            copyPixButton.innerHTML = "COPIAR CHAVE PIX <b>⧉</b>";
+
+        }, 2500);
+
+    } catch (error) {
+
+        alert("Não foi possível copiar automaticamente. Copie a chave manualmente.");
+
+    }
+
+});
+
+</script>
 
 
 </body>
