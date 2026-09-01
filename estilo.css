@@ -3252,3 +3252,583 @@ footer {
     }
 
 }
+/* =========================================================
+   REDES E SUPORTE
+   ========================================================= */
+
+.social-page {
+    background: var(--bg);
+}
+
+
+.social-main {
+    width: 100%;
+
+    padding-top: 78px;
+}
+
+
+/* ==============================
+   CABEÇALHO
+   ============================== */
+
+.social-header {
+    padding: 120px 7% 85px;
+
+    background:
+
+        radial-gradient(
+            circle at 80% 10%,
+            rgba(57, 191, 255, 0.10),
+            transparent 35%
+        ),
+
+        var(--bg);
+}
+
+
+.social-header h1 {
+    margin: 0;
+
+    color: var(--white);
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: clamp(70px, 10vw, 130px);
+
+    font-weight: 600;
+
+    line-height: 0.85;
+
+    letter-spacing: -0.025em;
+
+    text-transform: uppercase;
+}
+
+
+.social-header p:last-child {
+    max-width: 550px;
+
+    margin-top: 25px;
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* ==============================
+   BLOCOS
+   ============================== */
+
+.social-block,
+.support-block {
+    padding: 90px 7%;
+}
+
+
+.support-block {
+    background: var(--bg-light);
+
+    border-top: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.social-block-header {
+    margin-bottom: 38px;
+}
+
+
+.social-block-header .eyebrow {
+    margin: 0 0 12px;
+
+    color: var(--blue);
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.25em;
+}
+
+
+.social-block-header h2 {
+    margin: 0;
+
+    color: var(--white);
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: clamp(42px, 6vw, 70px);
+
+    font-weight: 600;
+
+    line-height: 0.9;
+}
+
+
+.support-intro {
+    max-width: 550px;
+
+    margin: 20px 0 0;
+
+    color: var(--text);
+
+    font-size: 14px;
+}
+
+
+/* ==============================
+   CARDS SOCIAIS
+   ============================== */
+
+.social-grid {
+    max-width: 1100px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 14px;
+}
+
+
+.social-card {
+    position: relative;
+
+    min-height: 160px;
+
+    padding: 25px;
+
+    display: grid;
+
+    grid-template-columns: 65px 1fr 25px;
+
+    align-items: center;
+
+    gap: 20px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(11, 20, 31, 0.98),
+            rgba(7, 13, 22, 0.98)
+        );
+
+    border: 1px solid var(--border);
+
+    transition: 0.22s ease;
+}
+
+
+.social-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 3px;
+
+    background: var(--blue);
+
+    transform: scaleY(0);
+
+    transition: 0.22s ease;
+}
+
+
+.social-card:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(57, 191, 255, 0.45);
+}
+
+
+.social-card:hover::before {
+    transform: scaleY(1);
+}
+
+
+.social-card-icon {
+    width: 65px;
+
+    height: 65px;
+
+    display: grid;
+
+    place-items: center;
+
+    border: 1px solid rgba(57, 191, 255, 0.30);
+
+    background: rgba(57, 191, 255, 0.05);
+
+    color: var(--blue-light);
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 19px;
+
+    font-weight: 600;
+}
+
+
+.social-card-content {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.social-card-content span {
+    color: var(--blue);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+}
+
+
+.social-card-content strong {
+    margin-top: 4px;
+
+    color: var(--white);
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 25px;
+
+    font-weight: 600;
+}
+
+
+.social-card-content small {
+    max-width: 360px;
+
+    margin-top: 7px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+.social-card-arrow {
+    color: var(--blue);
+
+    font-size: 22px;
+
+    transition: 0.2s ease;
+}
+
+
+.social-card:hover .social-card-arrow {
+    transform: translateX(5px);
+}
+
+
+/* ==============================
+   SUPORTE
+   ============================== */
+
+.support-grid {
+    max-width: 1100px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 14px;
+}
+
+
+.support-card {
+    position: relative;
+
+    min-height: 260px;
+
+    padding: 28px;
+
+    display: grid;
+
+    grid-template-columns: 65px 1fr;
+
+    gap: 25px;
+
+    overflow: hidden;
+
+    background: #070d15;
+
+    border: 1px solid var(--border);
+
+    transition: 0.22s ease;
+}
+
+
+.support-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 3px;
+
+    background: var(--blue);
+
+    transform: scaleY(0);
+
+    transition: 0.22s ease;
+}
+
+
+.support-card:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(57, 191, 255, 0.45);
+}
+
+
+.support-card:hover::before {
+    transform: scaleY(1);
+}
+
+
+.support-number {
+    color: #183044;
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 52px;
+
+    font-weight: 600;
+
+    line-height: 1;
+}
+
+
+.support-content {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+.support-content span {
+    color: var(--blue);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+}
+
+
+.support-content strong {
+    margin-top: 5px;
+
+    color: var(--white);
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 28px;
+
+    font-weight: 600;
+}
+
+
+.support-content p {
+    max-width: 420px;
+
+    margin: 15px 0 20px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+.support-content b {
+    margin-top: auto;
+
+    color: var(--blue-light);
+
+    font-size: 9px;
+
+    letter-spacing: 0.12em;
+}
+
+
+/* ==============================
+   AVISO
+   ============================== */
+
+.social-notice {
+    max-width: 1100px;
+
+    margin: 0 7% 100px;
+
+    padding: 24px;
+
+    display: grid;
+
+    grid-template-columns: 45px 1fr;
+
+    gap: 20px;
+
+    background: rgba(11, 20, 31, 0.7);
+
+    border: 1px solid var(--border);
+}
+
+
+.notice-symbol {
+    width: 35px;
+
+    height: 35px;
+
+    display: grid;
+
+    place-items: center;
+
+    border: 1px solid rgba(57, 191, 255, 0.3);
+
+    color: var(--blue);
+
+    font-family: "Oswald", sans-serif;
+
+    font-weight: 600;
+}
+
+
+.social-notice strong {
+    color: var(--white);
+
+    font-size: 10px;
+
+    letter-spacing: 0.12em;
+}
+
+
+.social-notice p {
+    max-width: 700px;
+
+    margin: 8px 0 0;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   RESPONSIVO
+   ============================== */
+
+@media (max-width: 800px) {
+
+    .social-main {
+        padding-top: 104px;
+    }
+
+
+    .social-header {
+        padding: 85px 6% 65px;
+    }
+
+
+    .social-block,
+    .support-block {
+        padding: 70px 6%;
+    }
+
+
+    .social-grid,
+    .support-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .social-notice {
+        margin: 0 6% 70px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .social-header h1 {
+        font-size: 65px;
+    }
+
+
+    .social-card {
+        min-height: 135px;
+
+        padding: 18px;
+
+        grid-template-columns: 50px 1fr 20px;
+
+        gap: 13px;
+    }
+
+
+    .social-card-icon {
+        width: 50px;
+
+        height: 50px;
+
+        font-size: 15px;
+    }
+
+
+    .social-card-content strong {
+        font-size: 21px;
+    }
+
+
+    .support-card {
+        min-height: 230px;
+
+        padding: 20px;
+
+        grid-template-columns: 50px 1fr;
+
+        gap: 15px;
+    }
+
+
+    .support-number {
+        font-size: 42px;
+    }
+
+
+    .support-content strong {
+        font-size: 23px;
+    }
+
+}
