@@ -6053,3 +6053,53 @@ footer {
     }
 
 }
+
+/* =========================================================
+   CORREÇÃO FINAL DE ALINHAMENTO
+   ========================================================= */
+
+.project-notice {
+    width: calc(100% - 14%) !important;
+    max-width: none !important;
+    margin: 70px 7% 100px !important;
+}
+
+.donation-thanks,
+.donation-success {
+    width: min(850px, calc(100% - 40px)) !important;
+    max-width: 850px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+.donation-thanks h2,
+.donation-success h2,
+.donation-thanks p,
+.donation-success p {
+    width: 100% !important;
+    max-width: 650px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+}
+
+/* Pequeno deslocamento vertical do conteúdo principal da Home */
+.hero-content {
+    transform: translateY(18px);
+}
+
+@media (max-width: 700px) {
+    .hero-content {
+        transform: translateY(10px);
+    }
+
+    .project-notice {
+        width: calc(100% - 10%) !important;
+        margin-left: 5% !important;
+        margin-right: 5% !important;
+    }
+}
