@@ -5350,3 +5350,28 @@ footer {
     }
 
 }
+/* =========================================================
+   BANDEIRAS DA PÁGINA DE IDIOMAS
+========================================================= */
+
+.language-flag {
+    overflow: hidden !important;
+
+    padding: 0 !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+}
+
+.language-flag img {
+    width: 100% !important;
+
+    height: 100% !important;
+
+    display: block !important;
+
+    object-fit: cover !important;
+}
