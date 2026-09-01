@@ -5899,3 +5899,112 @@ footer {
     align-items: center;
     justify-content: center;
 }
+/* =========================================================
+   AVISO IMPORTANTE — PROJETO FAN-MADE
+   ========================================================= */
+
+.project-notice {
+    max-width: 1100px;
+    margin: 100px auto 0;
+    padding: 45px 50px;
+
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 45px;
+
+    box-sizing: border-box;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+
+.project-notice-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+
+.project-notice-label span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 28px;
+    height: 28px;
+
+    flex-shrink: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.project-notice-label p {
+    margin: 5px 0 0;
+
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    font-weight: 700;
+}
+
+
+.project-notice-content h2 {
+    margin: 0 0 25px;
+
+    font-size: clamp(28px, 4vw, 42px);
+
+    line-height: 1.05;
+}
+
+
+.project-notice-content h2 span {
+    opacity: 0.55;
+}
+
+
+.project-notice-content p {
+    max-width: 760px;
+
+    margin: 0;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    opacity: 0.62;
+}
+
+
+.project-notice-content strong {
+    opacity: 1;
+}
+
+
+.project-notice-content em {
+    font-style: italic;
+}
+
+
+/* =========================================================
+   RESPONSIVO
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .project-notice {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        margin-top: 70px;
+
+        padding: 35px 25px;
+
+    }
+
+}
