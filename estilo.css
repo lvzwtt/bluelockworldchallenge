@@ -6103,3 +6103,17 @@ footer {
         margin-right: 5% !important;
     }
 }
+.next-disabled,
+.next-disabled:hover {
+    opacity: 0.25;
+    cursor: default;
+    pointer-events: none;
+
+    transform: none;
+
+    background: #080b10;
+    color: #ffffff;
+
+    box-shadow: none;
+    border-color: transparent;
+}
