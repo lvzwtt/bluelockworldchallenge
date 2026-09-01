@@ -3845,3 +3845,32 @@ footer {
     display: block;
     object-fit: cover;
 }
+/* =========================================================
+   AJUSTE DO CARD DO INSTAGRAM
+========================================================= */
+
+.instagram-icon {
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+    min-height: 58px;
+
+    padding: 0;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #12a8ff;
+    box-sizing: border-box;
+}
+
+.instagram-icon img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
