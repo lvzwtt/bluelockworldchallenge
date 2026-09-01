@@ -1,22 +1,32 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    const TEMPO_PARA_APARECER = 3 * 60 * 1000;
-    const INTERVALO_ENTRE_EXIBICOES = 5 * 60 * 1000;
+    /* =====================================================
+       POP-UP SOMENTE NA PÁGINA INICIAL
+       ===================================================== */
 
+    const paginaAtual =
+        window.location.pathname.split("/").pop() || "index.html";
 
-    const ultimaExibicao =
-        localStorage.getItem("worldChallengeDonationPopup");
-
-    const agora = Date.now();
-
-
-    if (
-        ultimaExibicao &&
-        agora - Number(ultimaExibicao) < INTERVALO_ENTRE_EXIBICOES
-    ) {
+    if (paginaAtual !== "index.html") {
         return;
     }
 
+
+    /* =====================================================
+       VERIFICA SE JÁ FOI MOSTRADO
+       ===================================================== */
+
+    const popupJaMostrado =
+        localStorage.getItem("worldChallengeDonationPopupShown");
+
+    if (popupJaMostrado === "true") {
+        return;
+    }
+
+
+    /* =====================================================
+       CRIA O POP-UP
+       ===================================================== */
 
     const popup = document.createElement("div");
 
@@ -27,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         <div class="donation-popup-box">
 
+
             <button
                 class="donation-popup-close"
                 aria-label="Fechar"
@@ -34,14 +45,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 ×
             </button>
 
+
             <p class="eyebrow">
                 BLUE LOCK: WORLD CHALLENGE
             </p>
+
 
             <h2>
                 GOSTARIA DE APOIAR<br>
                 <span>O PROJETO?</span>
             </h2>
+
 
             <p class="donation-popup-text">
 
@@ -53,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             </p>
 
+
             <p class="donation-popup-note">
 
                 A contribuição é totalmente opcional.
@@ -60,12 +75,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
             </p>
 
+
             <a
                 href="doacao.html"
                 class="primary donation-popup-button"
             >
                 APOIAR O PROJETO →
             </a>
+
 
         </div>
 
@@ -75,17 +92,25 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(popup);
 
 
+    /* =====================================================
+       MOSTRA APÓS 15 SEGUNDOS
+       ===================================================== */
+
     setTimeout(function () {
 
         popup.classList.add("show");
 
         localStorage.setItem(
-            "worldChallengeDonationPopup",
-            Date.now().toString()
+            "worldChallengeDonationPopupShown",
+            "true"
         );
 
-    }, TEMPO_PARA_APARECER);
+    }, 15000);
 
+
+    /* =====================================================
+       FECHAR NO X
+       ===================================================== */
 
     const closeButton =
         popup.querySelector(".donation-popup-close");
@@ -97,6 +122,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
+
+    /* =====================================================
+       FECHAR CLICANDO FORA
+       ===================================================== */
 
     popup.addEventListener("click", function (event) {
 
