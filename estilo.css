@@ -1,535 +1,3 @@
-ok foi, mas a pagina de idioma ainda ta fudido e o popup ta em baixo na tela inical- idiomas- <!DOCTYPE html>
-<html lang="pt-BR">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Capítulos — Blue Lock: World Challenge</title>
-
-    <link rel="stylesheet" href="estilo.css">
-
-</head>
-
-
-<body>
-
-
-<header class="topbar">
-
-
-    <a
-        href="index.html"
-        class="brand"
-    >
-
-        <span>
-            BLUE LOCK
-        </span>
-
-        <small>
-            WORLD CHALLENGE
-        </small>
-
-    </a>
-
-
-    <nav>
-
-        <a href="index.html">
-            INÍCIO
-        </a>
-
-
-        <a
-            href="idiomas.html"
-            class="active"
-        >
-            CAPÍTULOS
-        </a>
-
-
-        <a href="sobre.html">
-            SOBRE
-        </a>
-
-
-        <a href="redes.html">
-            REDES
-        </a>
-
-
-        <a href="doacao.html">
-            DOAÇÃO
-        </a>
-
-    </nav>
-
-</header>
-
-
-
-<main class="language-page">
-
-
-    <!-- =====================================================
-         CABEÇALHO
-    ====================================================== -->
-
-
-    <section class="language-header">
-
-
-        <p class="eyebrow">
-            BLUE LOCK: WORLD CHALLENGE
-        </p>
-
-
-        <h1>
-            ESCOLHA O IDIOMA
-        </h1>
-
-
-        <p>
-            Selecione o idioma em que deseja acompanhar os capítulos.
-        </p>
-
-
-    </section>
-
-
-
-    <!-- =====================================================
-         IDIOMAS
-    ====================================================== -->
-
-
-    <section class="language-grid">
-
-
-
-        <!-- =================================================
-             PORTUGUÊS
-        ================================================== -->
-
-
-        <a
-            href="capitulos-pt.html"
-            class="language-card"
-        >
-
-
-            <div class="language-flag">
-
-                <img
-                    src="brasil.flag.jpg"
-                    alt="Brasil"
-                >
-
-            </div>
-
-
-            <div class="language-info">
-
-
-                <span class="language-label">
-                    IDIOMA
-                </span>
-
-
-                <strong>
-                    PORTUGUÊS
-                </strong>
-
-
-                <small>
-                    Capítulos em português
-                </small>
-
-
-            </div>
-
-
-            <span class="language-arrow">
-                →
-            </span>
-
-
-        </a>
-
-
-
-        <!-- =================================================
-             ENGLISH
-        ================================================== -->
-
-
-        <a
-            href="capitulos-en.html"
-            class="language-card"
-        >
-
-
-            <div class="language-flag">
-
-                <img
-                    src="usa.flag.jpg"
-                    alt="United States"
-                >
-
-            </div>
-
-
-            <div class="language-info">
-
-
-                <span class="language-label">
-                    LANGUAGE
-                </span>
-
-
-                <strong>
-                    ENGLISH
-                </strong>
-
-
-                <small>
-                    Chapters in English
-                </small>
-
-
-            </div>
-
-
-            <span class="language-arrow">
-                →
-            </span>
-
-
-        </a>
-
-
-
-        <!-- =================================================
-             ESPAÑOL
-        ================================================== -->
-
-
-        <a
-            href="capitulos-es.html"
-            class="language-card"
-        >
-
-
-            <div class="language-flag">
-
-                <img
-                    src="spanish.flag.jpg"
-                    alt="España"
-                >
-
-            </div>
-
-
-            <div class="language-info">
-
-
-                <span class="language-label">
-                    IDIOMA
-                </span>
-
-
-                <strong>
-                    ESPAÑOL
-                </strong>
-
-
-                <small>
-                    Capítulos en español
-                </small>
-
-
-            </div>
-
-
-            <span class="language-arrow">
-                →
-            </span>
-
-
-        </a>
-
-
-    </section>
-
-
-
-    <!-- =====================================================
-         VOLTAR
-    ====================================================== -->
-
-
-    <div class="language-back">
-
-
-        <a
-            href="index.html"
-            class="reader-button"
-        >
-            ← VOLTAR AO INÍCIO
-        </a>
-
-
-    </div>
-
-
-</main>
-
-
-
-<footer>
-
-
-    <span>
-        BLUE LOCK: WORLD CHALLENGE
-    </span>
-
-
-    <span>
-        FAN MADE PROJECT
-    </span>
-
-
-</footer>
-
-
-</body>
-
-</html>
-
-ok, deu tudo certo, mas a parte da msg de agradecimento ao pix, ao inves d eestar no meio foi p lado, consert isso e nos ja vai p prox parte do pop up
-Texto colado(9).txt
-Documento
-manda o estilo corrigido- 
-pronto, porem na tela inicial ainda parece os 2 , poderia colocar o em breve, mas naof az sentido estarem em ultmos capitulos se nem foram lançados, deixa so o 1
-quero q ele fique em cima de ´´sobre o projjeto, e do lado, da msm forms
-Texto colado(10).txt
-Documento
-e o estilo ta assim-
-
-Aqui ó 😭 no seu estilo.css, lá no final, procure exatamente este trecho:
-
-.project-notice {
-    max-width: 1100px;
-    margin: 100px auto 0;
-    padding: 45px 50px;
-
-A única coisa que você vai mudar é esta linha:
-
-margin: 100px auto 0;
-
-para:
-
-margin: 100px 7% 0;
-
-Então fica:
-
-.project-notice {
-    max-width: 1100px;
-    margin: 100px 7% 0;
-    padding: 45px 50px;
-
-    display: grid;
-    grid-template-columns: 180px 1fr;
-    gap: 45px;
-
-    box-sizing: border-box;
-
-    border-top: 1px solid rgba(255, 255, 255, 0.10);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
-}
-
-Não muda absolutamente mais nada. É só essa linha.
-
-Texto colado(20260901-143839).txt
-Documento
-
-Sim — recebi o estilo.css atual.
-
-Para deixar o aviso importante alinhado à esquerda, igual ao bloco “Sobre o Projeto”, não precisa mexer no HTML. No CSS, o ajuste é no .project-notice.
-
-Só que o trecho .project-notice não aparece no pedaço do arquivo que foi carregado até aqui. Então não vou inventar posição nem mandar você alterar uma coisa errada.
-
-Se você quiser, eu posso pegar o seu estilo.css completo e te devolver ele inteiro já corrigido, mantendo todo o resto exatamente como está.
-
-Texto colado(20260901-143935).txt
-Documento
-oq eu mudo aq- 
-
-Ahh, agora consigo ver o trecho certinho. 😭
-
-Se você está falando do aviso “Fan Made” da página Sobre, ele já está alinhado à esquerda pelo CSS atual:
-
-.about-notice {
-    max-width: 1050px;
-    margin-top: 55px;
-    padding: 22px 25px;
-    background: rgba(57, 191, 255, 0.035);
-    border-left: 3px solid var(--blue);
-    color: var(--muted);
-    font-size: 12px;
-    line-height: 1.7;
-}
-
-O que pode estar fazendo ele não começar exatamente no mesmo ponto do conteúdo “Sobre o Projeto” é o max-width: 1050px.
-
-Se a sua intenção é deixar o aviso exatamente começando no mesmo alinhamento do texto acima, troque:
-
-.about-notice {
-    max-width: 1050px;
-
-por:
-
-.about-notice {
-    max-width: 700px;
-
-Porque o conteúdo principal .about-content está limitado a 700px .
-
-Mas atenção: se você está falando de outro “aviso importante” que não é o AVISO FAN MADE, me manda um print dele que eu te digo exatamente qual linha mudar.
-
-mande compelto e certo, so alterand isso.
-
-Sim. Vou manter todo o seu estilo exatamente como está e alterar somente o .about-notice de 1050px para 700px, para ele ficar alinhado à esquerda com o bloco de texto da página. O restante permanece igual.
-
-/* =========================================================
-   AVISO FAN MADE
-   ========================================================= */
-
-.about-notice {
-    max-width: 700px;
-
-    margin-top: 55px;
-
-    padding: 22px 25px;
-
-    background: rgba(57, 191, 255, 0.035);
-
-    border-left: 3px solid var(--blue);
-
-    color: var(--muted);
-
-    font-size: 12px;
-
-    line-height: 1.7;
-}
-
-
-.about-notice strong {
-    color: var(--white);
-}
-
-
-/* =========================================================
-   CELULAR
-   ========================================================= */
-
-@media (max-width: 800px) {
-
-    .about-page {
-        padding: 135px 5% 70px;
-    }
-
-
-    .about-header {
-        margin-bottom: 50px;
-    }
-
-
-    .about-header h1 {
-        font-size: 65px;
-    }
-
-
-    .about-main {
-        grid-template-columns: 1fr;
-
-        gap: 40px;
-    }
-
-
-    .about-content h2 {
-        font-size: 32px;
-    }
-
-
-    .about-card {
-        min-height: 220px;
-    }
-
-
-    .about-divider {
-        margin: 60px 0 40px;
-    }
-
-
-    .about-credits h2 {
-        font-size: 36px;
-    }
-
-
-    .credits-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-/* =========================================================
-   CELULAR PEQUENO
-   ========================================================= */
-
-@media (max-width: 500px) {
-
-    .about-header h1 {
-        font-size: 55px;
-    }
-
-
-    .about-header p:last-child {
-        font-size: 13px;
-    }
-
-
-    .about-card {
-        padding: 22px;
-    }
-
-
-    .about-card h3 {
-        font-size: 29px;
-    }
-
-
-    .about-content p {
-        font-size: 13px;
-    }
-}
-
-É só essa mudança mesmo: max-width: 1050px → max-width: 700px. Não mexe no resto do estilo.css.
-
-ok, vou testar
-
-Beleza 😭👍 testa aí. Não mexe em mais nada por enquanto.
-
-ok , espero q na de direitos autorais..
-
-KKKKKK sim 😭 agora a ideia é justamente essa: deixar bem explícito que é fan-made, não oficial e que não existe vínculo com os detentores dos direitos.
-
-Só lembrando: esse aviso não garante proteção jurídica nem impede uma eventual solicitação de remoção, mas é uma boa medida de transparência e deixa a natureza do projeto muito clara.
-
-Quando você terminar de testar, a gente pode revisar a parte de direitos autorais com calma antes de publicar.
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap');
 
 /* =========================================================
@@ -537,7 +5,7 @@ BLUE LOCK: WORLD CHALLENGE
 ESTILO PRINCIPAL
 ========================================================= */
 
-{
+:root {
 --bg: #05080e;
 --bg-light: #080e17;
 --panel: #0b121c;
@@ -557,7 +25,7 @@ ESTILO PRINCIPAL
 RESET
 ========================================================= */
 
-{
+* {
 box-sizing: border-box;
 }
 
@@ -670,7 +138,7 @@ transition: 0.2s ease;
 
 }
 
-nav a {
+nav a:hover {
 color: white;
 }
 
@@ -1352,7 +820,7 @@ transition: 0.2s ease;
 
 /* HOVER */
 
-.chapter-row {
+.chapter-row:hover {
 transform: translateX(6px);
 
 border-color: rgba(57, 191, 255, 0.45);
@@ -1761,7 +1229,7 @@ transition: 0.3s ease;
 
 /* HOVER */
 
-.social-card {
+.social-card:hover {
 
 transform: translateY(-5px);
 
@@ -2136,7 +1604,7 @@ transition: 0.3s ease;
 
 /* HOVER */
 
-.support-card {
+.support-card:hover {
 transform: translateY(-4px);
 
 border-color: rgba(57, 191, 255, 0.5);
@@ -2729,7 +2197,7 @@ transition:
 
 }
 
-.credit-card {
+.credit-card:hover {
 transform: translateY(-4px);
 
 border-color:
@@ -4147,7 +3615,7 @@ transition: 0.22s ease;
 
 }
 
-.support-card {
+.support-card:hover {
 transform: translateY(-4px);
 
 border-color: rgba(57, 191, 255, 0.45);
@@ -6297,7 +5765,7 @@ opacity: 0.7;
 .support-note {
 margin-top: 35px;
 }
-/ =========================================================
+/* =========================================================
 POP-UP DE DOAÇÃO
 ========================================================= */
 
@@ -6429,7 +5897,7 @@ AVISO IMPORTANTE — PROJETO FAN-MADE
 
 .project-notice {
 max-width: 1100px;
-margin: 100px auto 0;
+margin: 100px 7% 0;
 padding: 45px 50px;
 
 display: grid;
@@ -6528,5 +5996,3 @@ RESPONSIVO
 }
 
 }
-
-Fechar
