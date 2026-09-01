@@ -4659,3 +4659,97 @@ footer {
     }
 
 }
+/* =========================================================
+   LOGO DO PROJETO
+========================================================= */
+
+.logo-mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.logo-mark img {
+    width: 100%;
+    max-width: 260px;
+
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+.logo-disclaimer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.logo-disclaimer img {
+    width: 100%;
+    max-width: 230px;
+
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   FOTOS DA EQUIPE
+========================================================= */
+
+.team-photo {
+    position: relative;
+
+    overflow: hidden;
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.team-card:hover .team-photo img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   REDES SOCIAIS DA EQUIPE
+========================================================= */
+
+.team-social {
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE DA LOGO
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .logo-mark img {
+        max-width: 220px;
+    }
+
+    .logo-disclaimer img {
+        max-width: 190px;
+    }
+
+}
