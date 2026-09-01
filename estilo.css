@@ -5769,148 +5769,6 @@ footer {
 .support-note {
     margin-top: 35px;
 }
-
-/* =========================================================
-   AVISO IMPORTANTE — PROJETO FAN-MADE
-   ========================================================= */
-
-.project-notice {
-    width: min(1100px, 86%);
-    margin: 100px auto 0;
-    padding: 45px 50px;
-
-    display: grid;
-    grid-template-columns: 180px 1fr;
-    gap: 45px;
-
-    box-sizing: border-box;
-
-    border-top: 1px solid rgba(255, 255, 255, 0.10);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
-}
-
-.project-notice-label {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-}
-
-.project-notice-label span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 28px;
-    height: 28px;
-
-    flex-shrink: 0;
-
-    border: 1px solid rgba(255, 255, 255, 0.35);
-
-    font-size: 14px;
-    font-weight: 700;
-}
-
-.project-notice-label p {
-    margin: 5px 0 0;
-
-    font-size: 11px;
-    letter-spacing: 0.14em;
-    font-weight: 700;
-}
-
-.project-notice-content h2 {
-    margin: 0 0 25px;
-
-    font-size: clamp(28px, 4vw, 42px);
-    line-height: 1.05;
-}
-
-.project-notice-content h2 span {
-    opacity: 0.55;
-}
-
-.project-notice-content p {
-    max-width: 760px;
-
-    margin: 0;
-
-    font-size: 13px;
-    line-height: 1.8;
-
-    opacity: 0.62;
-}
-
-.project-notice-content strong {
-    opacity: 1;
-}
-
-.project-notice-content em {
-    font-style: italic;
-}
-
-/* =========================================================
-   AGRADECIMENTO / CONFIRMAÇÃO DE DOAÇÃO
-   ========================================================= */
-
-.donation-success {
-    width: 100%;
-    max-width: 850px;
-
-    margin: 30px auto 0;
-    padding: 90px 30px 20px;
-
-    box-sizing: border-box;
-
-    text-align: center;
-
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.donation-success h2 {
-    width: 100%;
-
-    margin: 15px auto 25px;
-
-    text-align: center;
-
-    line-height: 1.05;
-}
-
-.donation-success p {
-    width: 100%;
-    max-width: 600px;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    text-align: center;
-
-    line-height: 1.8;
-
-    opacity: 0.65;
-}
-
-/* =========================================================
-   RESPONSIVO — AVISO FAN-MADE
-   ========================================================= */
-
-@media (max-width: 700px) {
-
-    .project-notice {
-        width: 90%;
-
-        grid-template-columns: 1fr;
-
-        gap: 25px;
-
-        margin-top: 70px;
-
-        padding: 35px 25px;
-    }
-
-}
-
 /* =========================================================
    POP-UP DE DOAÇÃO
    ========================================================= */
@@ -6040,4 +5898,158 @@ footer {
 
     align-items: center;
     justify-content: center;
+}
+
+
+/* =========================================================
+   AJUSTES FINAIS
+   ========================================================= */
+
+/* AVISO IMPORTANTE DA HOME — alinhado à esquerda */
+.project-notice {
+    width: min(1100px, calc(100% - 14%));
+    max-width: 1100px;
+
+    margin: 70px 7% 100px;
+    padding: 45px 50px;
+
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 45px;
+
+    box-sizing: border-box;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.project-notice-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.project-notice-label span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 28px;
+    height: 28px;
+
+    flex-shrink: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.project-notice-label p {
+    margin: 5px 0 0;
+
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    font-weight: 700;
+}
+
+.project-notice-content h2 {
+    margin: 0 0 25px;
+
+    font-size: clamp(28px, 4vw, 42px);
+
+    line-height: 1.05;
+}
+
+.project-notice-content h2 span {
+    opacity: 0.55;
+}
+
+.project-notice-content p {
+    max-width: 760px;
+
+    margin: 0;
+
+    font-size: 13px;
+    line-height: 1.8;
+
+    opacity: 0.62;
+}
+
+.project-notice-content strong {
+    opacity: 1;
+}
+
+
+/* AGRADECIMENTO DA DOAÇÃO — CENTRALIZADO */
+.donation-thanks,
+.donation-success {
+    width: 100%;
+
+    max-width: 850px;
+
+    margin: 30px auto 0 !important;
+
+    padding: 90px 30px 20px;
+
+    box-sizing: border-box;
+
+    text-align: center !important;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.donation-thanks h2,
+.donation-success h2 {
+    width: 100%;
+
+    margin: 15px auto 25px !important;
+
+    text-align: center !important;
+
+    line-height: 1.05;
+}
+
+.donation-thanks p,
+.donation-success p {
+    width: 100%;
+
+    max-width: 600px;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    text-align: center !important;
+
+    line-height: 1.8;
+
+    opacity: 0.65;
+}
+
+
+/* HERO — ligeiro deslocamento para baixo */
+.hero-content {
+    padding: 0 7% 8%;
+}
+
+.intro {
+    margin: 40px 0;
+}
+
+
+/* RESPONSIVO DO AVISO */
+@media (max-width: 700px) {
+
+    .project-notice {
+        width: calc(100% - 10%);
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        margin: 70px 5%;
+
+        padding: 35px 25px;
+    }
+
 }
