@@ -5050,3 +5050,303 @@ footer {
 
     object-fit: cover !important;
 }
+/* =========================================================
+   PÁGINA DE SELEÇÃO DE IDIOMA
+========================================================= */
+
+.language-page {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 110px 40px 100px;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+.language-header {
+    max-width: 900px;
+    margin-bottom: 55px;
+}
+
+.language-header h1 {
+    margin: 10px 0 20px;
+
+    font-size: clamp(52px, 7vw, 92px);
+
+    line-height: 0.95;
+
+    letter-spacing: -2px;
+}
+
+.language-header p:not(.eyebrow) {
+    max-width: 650px;
+
+    margin: 0;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   GRID DOS IDIOMAS
+========================================================= */
+
+.language-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.language-card {
+    position: relative;
+
+    min-height: 190px;
+
+    padding: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    box-sizing: border-box;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    background: #08121c;
+
+    border: 1px solid #173247;
+
+    overflow: hidden;
+
+    transition:
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* detalhe circular */
+
+.language-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+
+    height: 150px;
+
+    right: -70px;
+
+    top: -75px;
+
+    border-radius: 50%;
+
+    background: rgba(18, 168, 255, 0.06);
+
+    pointer-events: none;
+}
+
+
+/* hover */
+
+.language-card:hover {
+    border-color: #12a8ff;
+
+    background: #0a1722;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   BANDEIRA
+========================================================= */
+
+.language-flag {
+    position: relative;
+
+    z-index: 2;
+
+    width: 64px;
+
+    height: 64px;
+
+    min-width: 64px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    border: 1px solid #21455e;
+
+    background: #07101a;
+
+    font-size: 32px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   INFORMAÇÕES
+========================================================= */
+
+.language-info {
+    position: relative;
+
+    z-index: 2;
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.language-label {
+    display: block;
+
+    color: #12a8ff;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.language-info strong {
+    display: block;
+
+    font-size: 22px;
+
+    line-height: 1.1;
+
+    color: #f4f7fb;
+}
+
+
+.language-info small {
+    display: block;
+
+    color: #7f91a0;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   SETA
+========================================================= */
+
+.language-arrow {
+    position: absolute;
+
+    right: 25px;
+
+    bottom: 22px;
+
+    z-index: 2;
+
+    color: #12a8ff;
+
+    font-size: 20px;
+
+    transition: transform 0.25s ease;
+}
+
+
+.language-card:hover .language-arrow {
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   BOTÃO VOLTAR
+========================================================= */
+
+.language-back {
+    margin-top: 35px;
+}
+
+
+/* =========================================================
+   RESPONSIVO
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .language-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .language-card {
+        min-height: 160px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .language-page {
+        padding: 80px 20px 70px;
+    }
+
+    .language-header {
+        margin-bottom: 35px;
+    }
+
+    .language-header h1 {
+        font-size: 54px;
+    }
+
+    .language-card {
+        min-height: 145px;
+
+        padding: 22px;
+    }
+
+    .language-flag {
+        width: 55px;
+        height: 55px;
+        min-width: 55px;
+
+        font-size: 27px;
+    }
+
+    .language-info strong {
+        font-size: 19px;
+    }
+
+}
