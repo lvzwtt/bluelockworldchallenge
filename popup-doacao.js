@@ -4,26 +4,17 @@ document.addEventListener("DOMContentLoaded", function () {
        CONFIGURAÇÕES
        ===================================================== */
 
-    const TEMPO_PARA_APARECER = 3 * 60 * 1000; // 3 minutos
-    const INTERVALO_ENTRE_EXIBICOES = 5 * 60 * 1000; // 5 minutos
+    const TEMPO_PARA_APARECER = 3 * 60 * 1000;
+
+    const INTERVALO_ENTRE_EXIBICOES = 5 * 60 * 1000;
 
 
     /* =====================================================
-       NÃO MOSTRAR NA PÁGINA DE DOAÇÃO
-       ===================================================== */
-
-    if (window.location.pathname.endsWith("doacao.html")) {
-        return;
-    }
-
-
-    /* =====================================================
-       VERIFICA QUANDO FOI A ÚLTIMA EXIBIÇÃO
+       VERIFICA ÚLTIMA EXIBIÇÃO
        ===================================================== */
 
     const ultimaExibicao =
         localStorage.getItem("worldChallengeDonationPopup");
-
 
     const agora = Date.now();
 
@@ -32,7 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
         ultimaExibicao &&
         agora - Number(ultimaExibicao) < INTERVALO_ENTRE_EXIBICOES
     ) {
+
         return;
+
     }
 
 
@@ -44,9 +37,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     popup.className = "donation-popup";
 
+
     popup.innerHTML = `
 
         <div class="donation-popup-box">
+
 
             <button
                 class="donation-popup-close"
@@ -106,20 +101,22 @@ document.addEventListener("DOMContentLoaded", function () {
        MOSTRA APÓS 3 MINUTOS
        ===================================================== */
 
-    const timer = setTimeout(function () {
+    setTimeout(function () {
 
         popup.classList.add("show");
+
 
         localStorage.setItem(
             "worldChallengeDonationPopup",
             Date.now().toString()
         );
 
+
     }, TEMPO_PARA_APARECER);
 
 
     /* =====================================================
-       FECHAR
+       BOTÃO FECHAR
        ===================================================== */
 
     const closeButton =
@@ -134,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =====================================================
-       FECHAR AO CLICAR FORA
+       FECHAR CLICANDO FORA
        ===================================================== */
 
     popup.addEventListener("click", function (event) {
