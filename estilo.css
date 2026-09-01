@@ -5025,3 +5025,28 @@ footer {
     }
 
 }
+/* =========================================================
+   FOTO DO INSTAGRAM DO PROJETO
+========================================================= */
+
+.instagram-profile-icon {
+    padding: 0 !important;
+
+    overflow: hidden !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+}
+
+.instagram-profile-icon img {
+    width: 100% !important;
+
+    height: 100% !important;
+
+    display: block !important;
+
+    object-fit: cover !important;
+}
