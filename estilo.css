@@ -5688,3 +5688,21 @@ footer {
     }
 
 }
+/* =========================================================
+   LOGO — PÁGINA DE DOAÇÃO
+   ========================================================= */
+
+.logo-donation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.logo-donation img {
+    width: 100%;
+    max-width: 170px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
