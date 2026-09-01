@@ -220,7 +220,7 @@
 
             <!-- =================================================
                  VALOR
-                 ================================================== -->
+            ================================================== -->
 
 
             <div class="donation-field">
@@ -264,7 +264,7 @@
 
             <!-- =================================================
                  NOME
-                 ================================================== -->
+            ================================================== -->
 
 
             <div class="donation-field">
@@ -295,7 +295,7 @@
 
             <!-- =================================================
                  MENSAGEM
-                 ================================================== -->
+            ================================================== -->
 
 
             <div class="donation-field">
@@ -326,7 +326,7 @@
 
             <!-- =================================================
                  BOTÃO
-                 ================================================= -->
+            ================================================== -->
 
 
             <button
@@ -363,7 +363,7 @@
 
 
             <p class="eyebrow">
-                CONTRIBUIÇÃO
+                CONTRIBUIÇÃO VOLUNTÁRIA
             </p>
 
 
@@ -374,8 +374,12 @@
 
 
             <p>
-                Copie a chave Pix abaixo e faça o pagamento
-                pelo aplicativo do seu banco.
+
+                O acesso à obra permanece gratuito.
+                Esta contribuição é totalmente opcional
+                e não representa a compra de qualquer
+                capítulo, conteúdo ou produto.
+
             </p>
 
 
@@ -395,7 +399,7 @@
 
 
                 <span id="pixKey">
-                    SUA-CHAVE-PIX-AQUI
+                    (19) 99900-0297
                 </span>
 
 
@@ -415,6 +419,31 @@
             </button>
 
 
+
+            <p class="pix-recipient">
+
+                <strong>
+                    Recebedora:
+                </strong>
+
+                Lívia Moraes
+
+            </p>
+
+
+
+            <p class="pix-contact-note">
+
+                Este número é disponibilizado exclusivamente
+                como chave Pix. Por favor, não envie mensagens
+                ou tente utilizá-lo para contato, pois este número
+                não está disponível para atendimento e não haverá
+                retorno.
+
+            </p>
+
+
+
             <p
                 id="copyMessage"
                 style="display: none;"
@@ -423,7 +452,84 @@
             </p>
 
 
+
+            <!-- =================================================
+                 CONFIRMAÇÃO
+            ================================================== -->
+
+
+            <button
+                type="button"
+                class="secondary donation-confirm-button"
+                id="pixDoneButton"
+            >
+
+                JÁ REALIZEI O PIX
+                <b>✓</b>
+
+            </button>
+
+
         </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         AGRADECIMENTO APÓS O PIX
+         ===================================================== -->
+
+
+    <section
+        class="donation-success"
+        id="donationSuccess"
+        style="display: none;"
+    >
+
+
+        <p class="eyebrow">
+            COM CARINHO, OBRIGADO
+        </p>
+
+
+        <h2>
+
+            SEU APOIO<br>
+
+            <span>
+                SIGNIFICA MUITO.
+            </span>
+
+        </h2>
+
+
+        <p>
+
+            Obrigado por contribuir com o
+            <strong>Blue Lock: World Challenge.</strong>
+
+            <br><br>
+
+            Este projeto é feito com dedicação e carinho
+            por fãs. Saber que existem pessoas dispostas
+            a apoiar essa jornada torna todo esse esforço
+            ainda mais especial.
+
+            <br><br>
+
+            Esperamos continuar trazendo novos capítulos,
+            ideias e histórias para todos que acompanham
+            o World Challenge.
+
+            <br><br>
+
+            <strong>
+                Obrigado por fazer parte dessa jornada. 💙
+            </strong>
+
+        </p>
 
 
     </section>
@@ -488,58 +594,137 @@
 
 <script>
 
-const donationForm = document.getElementById("donationForm");
 
-const pixSection = document.getElementById("pixSection");
+const donationForm =
+    document.getElementById("donationForm");
 
-const copyPixButton = document.getElementById("copyPixButton");
 
-const pixKey = document.getElementById("pixKey");
+const pixSection =
+    document.getElementById("pixSection");
 
-const copyMessage = document.getElementById("copyMessage");
+
+const copyPixButton =
+    document.getElementById("copyPixButton");
+
+
+const pixKey =
+    document.getElementById("pixKey");
+
+
+const copyMessage =
+    document.getElementById("copyMessage");
+
+
+const pixDoneButton =
+    document.getElementById("pixDoneButton");
+
+
+const donationSuccess =
+    document.getElementById("donationSuccess");
+
+
+
+/* =========================================================
+   CONTINUAR → MOSTRAR PIX
+   ========================================================= */
 
 
 donationForm.addEventListener("submit", function(event) {
 
     event.preventDefault();
 
+
     pixSection.style.display = "block";
 
+
     pixSection.scrollIntoView({
+
         behavior: "smooth",
+
         block: "start"
+
     });
 
 });
 
 
+
+/* =========================================================
+   COPIAR CHAVE PIX
+   ========================================================= */
+
+
 copyPixButton.addEventListener("click", async function() {
 
-    const key = pixKey.textContent.trim();
+
+    const key =
+        pixKey.textContent.trim();
+
 
     try {
 
+
         await navigator.clipboard.writeText(key);
+
 
         copyMessage.style.display = "block";
 
-        copyPixButton.innerHTML = "CHAVE COPIADA <b>✓</b>";
+
+        copyPixButton.innerHTML =
+            "CHAVE COPIADA <b>✓</b>";
+
 
         setTimeout(function() {
 
-            copyMessage.style.display = "none";
 
-            copyPixButton.innerHTML = "COPIAR CHAVE PIX <b>⧉</b>";
+            copyMessage.style.display =
+                "none";
+
+
+            copyPixButton.innerHTML =
+                "COPIAR CHAVE PIX <b>⧉</b>";
+
 
         }, 2500);
 
+
     } catch (error) {
 
-        alert("Não foi possível copiar automaticamente. Copie a chave manualmente.");
+
+        alert(
+            "Não foi possível copiar automaticamente. Copie a chave manualmente."
+        );
+
 
     }
 
+
 });
+
+
+
+/* =========================================================
+   JÁ REALIZEI O PIX → AGRADECIMENTO
+   ========================================================= */
+
+
+pixDoneButton.addEventListener("click", function() {
+
+
+    donationSuccess.style.display = "block";
+
+
+    donationSuccess.scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "center"
+
+    });
+
+
+});
+
 
 </script>
 
