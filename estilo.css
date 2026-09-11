@@ -6065,15 +6065,19 @@ footer {
 }
 
 .donation-thanks,
+.donation-thanks,
 .donation-success {
     width: min(850px, calc(100% - 40px)) !important;
     max-width: 850px !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     text-align: center !important;
+}
+
+.donation-success {
+    display: none;
 }
 
 .donation-thanks h2,
