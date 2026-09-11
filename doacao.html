@@ -541,7 +541,11 @@
     ====================================================== -->
 
 
-    <section class="donation-thanks">
+    <section
+        class="donation-thanks"
+        id="donationThanks"
+        style="display: none;"
+    >
 
 
         <p class="eyebrow">
@@ -621,6 +625,10 @@ const pixDoneButton =
 
 const donationSuccess =
     document.getElementById("donationSuccess");
+
+
+const donationThanks =
+    document.getElementById("donationThanks");
 
 
 
@@ -712,6 +720,9 @@ pixDoneButton.addEventListener("click", function() {
 
 
     donationSuccess.style.display = "block";
+
+
+    donationThanks.style.display = "block";
 
 
     donationSuccess.scrollIntoView({
