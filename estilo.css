@@ -6065,7 +6065,6 @@ footer {
 }
 
 .donation-thanks,
-.donation-thanks,
 .donation-success {
     width: min(850px, calc(100% - 40px)) !important;
     max-width: 850px !important;
@@ -6076,8 +6075,14 @@ footer {
     text-align: center !important;
 }
 
+/* SOMENTE O AGRADECIMENTO APÓS O PIX FICA ESCONDIDO */
 .donation-success {
     display: none;
+}
+
+/* A mensagem "MESMO QUE VOCÊ NÃO DOE" continua sempre visível */
+.donation-thanks {
+    display: flex !important;
 }
 
 .donation-thanks h2,
