@@ -2,204 +2,104 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Doação — Blue Lock: World Challenge</title>
 
-    <link rel="stylesheet" href="estilo.css?v=7">
-
+    <link rel="stylesheet" href="estilo.css?v=1">
 </head>
-
 
 <body>
 
-
 <header class="topbar">
 
+    <div class="topbar-inner">
 
-    <a
-        class="brand"
-        href="index.html"
-    >
-
-        <span>
-            BLUE LOCK
-        </span>
-
-        <small>
-            WORLD CHALLENGE
-        </small>
-
-    </a>
-
-
-    <nav>
-
-
-        <a href="index.html">
-            INÍCIO
+        <a class="brand" href="index.html">
+            BLUE<b>LOCK</b>
+            <small>WORLD CHALLENGE</small>
         </a>
 
+        <nav>
 
-        <a href="idiomas.html">
-            CAPÍTULOS
-        </a>
+            <a href="index.html">Início</a>
 
+            <a href="idiomas.html">Capítulos</a>
 
-        <a href="sobre.html">
-            SOBRE
-        </a>
+            <a href="obra.html">A obra</a>
 
+            <a href="sobre.html">Sobre</a>
 
-        <a href="redes.html">
-            REDES
-        </a>
+            <a href="redes.html">Redes</a>
 
+            <a href="doacao.html" class="active">Doação</a>
 
-        <a
-            href="doacao.html"
-            class="active"
-        >
-            DOAÇÃO
-        </a>
+        </nav>
 
+        <div class="header-tools">
 
-    </nav>
+            <button class="icon-btn" type="button" data-tema-toggle title="Alternar modo claro e escuro">☀</button>
 
+            <span class="lang-switch">
+
+                <a href="capitulos-pt.html" title="Português">PT</a>
+
+                <a href="capitulos-en.html" title="English">EN</a>
+
+                <a href="capitulos-es.html" title="Español">ES</a>
+
+            </span>
+
+        </div>
+
+    </div>
 
 </header>
 
 
-
-<main class="donation-page">
-
-
-    <!-- =====================================================
-         CABEÇALHO
-    ====================================================== -->
+<main>
 
 
-    <section class="donation-header">
-
+    <section class="page-head">
 
         <p class="eyebrow">
-            BLUE LOCK: WORLD CHALLENGE
+            Blue Lock: World Challenge
         </p>
-
 
         <h1>
-            APOIE O PROJETO
+            Apoiar o projeto
         </h1>
 
-
         <p>
-
-            Se você quiser contribuir com o projeto,
-            qualquer valor será muito bem-vindo.
-
+            O World Challenge é um projeto independente, feito por fãs.
+            Se quiser ajudar a manter os capítulos, traduções e o site,
+            qualquer valor é bem-vindo.
         </p>
 
-
     </section>
 
 
 
-    <!-- =====================================================
-         INTRODUÇÃO
-    ====================================================== -->
+    <div class="donation-block">
 
 
-    <section class="donation-introduction">
+        <!-- =================================================
+             FORMULÁRIO
+        ================================================== -->
 
 
-        <div class="donation-mark logo-donation">
-
-
-            <img
-                src="logo.jpg"
-                alt="Blue Lock: World Challenge"
-            >
-
-
-        </div>
-
-
-        <div class="donation-text">
+        <section class="donation-card">
 
 
             <p class="eyebrow">
-                UMA CONTRIBUIÇÃO OPCIONAL
+                Contribuição
             </p>
 
 
             <h2>
-                DE FÃS.<br>
-                <span>PARA FÃS.</span>
-            </h2>
-
-
-            <p>
-
-                Blue Lock: World Challenge é um projeto
-                independente feito com dedicação, tempo e
-                carinho por fãs que querem compartilhar
-                uma nova história.
-
-            </p>
-
-
-            <p>
-
-                Se você gosta do projeto e quiser ajudar,
-                sua contribuição pode nos ajudar a continuar
-                criando, traduzindo, divulgando e melhorando
-                o World Challenge.
-
-            </p>
-
-
-            <p class="donation-note">
-
-                <strong>
-                    Não existe valor mínimo.
-                </strong>
-
-                Doar é completamente opcional e você
-                continua sendo muito bem-vindo ao projeto
-                mesmo sem contribuir.
-
-            </p>
-
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- =====================================================
-         CONTRIBUIÇÃO
-    ====================================================== -->
-
-
-    <section class="donation-form-section">
-
-
-        <div class="donation-form-header">
-
-
-            <p class="eyebrow">
-                CONTRIBUIÇÃO
-            </p>
-
-
-            <h2>
-                QUANTO VOCÊ<br>
-                GOSTARIA DE CONTRIBUIR?
+                Quanto você<br>
+                <span>gostaria de contribuir?</span>
             </h2>
 
 
@@ -208,371 +108,232 @@
             </p>
 
 
-        </div>
+            <p class="donation-note">
+                A contribuição é totalmente opcional.
+                O acesso à obra continua gratuito.
+            </p>
 
 
 
-        <form
-            class="donation-form"
-            id="donationForm"
-        >
+            <form class="donation-form" id="donationForm">
 
 
-            <!-- =================================================
-                 VALOR
-            ================================================== -->
+                <div class="donation-field">
 
+                    <label for="valor">
+                        VALOR
+                    </label>
 
-            <div class="donation-field">
+                    <div class="donation-value">
 
+                        <span>R$</span>
 
-                <label for="valor">
-                    VALOR
-                </label>
+                        <input
+                            type="number"
+                            id="valor"
+                            name="valor"
+                            min="0"
+                            step="0.01"
+                            placeholder="0,00"
+                        >
 
+                    </div>
 
-                <div class="donation-value">
-
-
-                    <span>
-                        R$
-                    </span>
-
-
-                    <input
-                        type="number"
-                        id="valor"
-                        name="valor"
-                        min="0"
-                        step="0.01"
-                        placeholder="0,00"
-                        required
-                    >
-
+                    <small>
+                        Qualquer valor é bem-vindo.
+                    </small>
 
                 </div>
 
 
-                <small>
-                    Não há valor mínimo.
-                </small>
 
+                <div class="donation-field">
 
-            </div>
+                    <label for="nome">
+                        SEU NOME (OPCIONAL)
+                    </label>
 
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Como você quer ser chamado"
+                    >
 
-
-            <!-- =================================================
-                 NOME
-            ================================================== -->
-
-
-            <div class="donation-field">
-
-
-                <label for="nome">
-                    SEU NOME
-                </label>
-
-
-                <input
-                    type="text"
-                    id="nome"
-                    name="nome"
-                    placeholder="Como gostaria de ser chamado?"
-                    maxlength="80"
-                >
-
-
-                <small>
-                    Você pode usar seu nome, apelido ou deixar em branco.
-                </small>
-
-
-            </div>
+                </div>
 
 
 
-            <!-- =================================================
-                 MENSAGEM
-            ================================================== -->
+                <div class="donation-field">
 
+                    <label for="mensagem">
+                        MENSAGEM (OPCIONAL)
+                    </label>
 
-            <div class="donation-field">
+                    <textarea
+                        id="mensagem"
+                        name="mensagem"
+                        placeholder="Deixe um recado para a equipe"
+                    ></textarea>
 
-
-                <label for="mensagem">
-                    DEIXE UM RECADO
-                </label>
-
-
-                <textarea
-                    id="mensagem"
-                    name="mensagem"
-                    rows="5"
-                    maxlength="500"
-                    placeholder="Quer deixar uma mensagem para a equipe?"
-                ></textarea>
-
-
-                <small>
-                    Sua mensagem é opcional.
-                </small>
-
-
-            </div>
+                </div>
 
 
 
-            <!-- =================================================
-                 BOTÃO
-            ================================================== -->
+                <button type="submit" class="donation-button">
+                    CONTINUAR →
+                </button>
 
 
-            <button
-                type="submit"
-                class="primary donation-button"
-            >
-
-                CONTINUAR
-                <b>→</b>
-
-            </button>
+            </form>
 
 
-        </form>
-
-
-    </section>
+        </section>
 
 
 
-    <!-- =====================================================
-         PAGAMENTO PIX
-    ====================================================== -->
+        <!-- =================================================
+             PIX
+        ================================================== -->
 
 
-    <section
-        class="donation-pix"
-        id="pixSection"
-        style="display: none;"
-    >
-
-
-        <div class="donation-form-header">
+        <section class="pix-card donation-pix" id="pixSection" style="display: none; margin-top: 20px;">
 
 
             <p class="eyebrow">
-                CONTRIBUIÇÃO VOLUNTÁRIA
+                Pagamento
             </p>
 
 
-            <h2>
-                PAGAMENTO<br>
-                <span>PIX</span>
+            <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(22px,2.8vw,34px);color:#fff;text-transform:uppercase;line-height:1.05;margin-bottom:14px;">
+                Pague com<br>
+                <span style="color:#2e7fe8;">Pix</span>
             </h2>
 
 
-            <p>
-
-                O acesso à obra permanece gratuito.
-                Esta contribuição é totalmente opcional
-                e não representa a compra de qualquer
-                capítulo, conteúdo ou produto.
-
-            </p>
-
-
-        </div>
-
-
-
-        <div class="pix-card">
-
-
-            <span class="social-label">
+            <p class="pix-recipient">
                 CHAVE PIX
-            </span>
+            </p>
 
 
             <div class="pix-key-box">
 
-
                 <span id="pixKey">
-                    (19) 99900-0297
+                    19999000297
                 </span>
-
 
             </div>
 
 
 
-            <button
-                type="button"
-                class="primary donation-button"
-                id="copyPixButton"
-            >
-
-                COPIAR CHAVE PIX
-                <b>⧉</b>
-
+            <button type="button" class="donation-button" id="copyPixButton">
+                COPIAR CHAVE PIX ⧉
             </button>
 
 
-
-            <p class="pix-recipient">
-
-                <strong>
-                    Recebedora:
-                </strong>
-
-                Lívia Moraes
-
-            </p>
-
-
-
-            <p class="pix-contact-note">
-
-                Este número é disponibilizado exclusivamente
-                como chave Pix. Por favor, não envie mensagens
-                ou tente utilizá-lo para contato, pois este número
-                não está disponível para atendimento e não haverá
-                retorno.
-
-            </p>
-
-
-
-            <p
-                id="copyMessage"
-                style="display: none;"
-            >
+            <p id="copyMessage" style="display: none; color: #5aa2f5; font-size: 13px; margin-top: 12px;">
                 Chave Pix copiada!
             </p>
 
 
+            <p class="pix-contact-note">
+                Este número é disponibilizado exclusivamente como chave Pix.
+                Por favor, não envie mensagens ou tente utilizá-lo para
+                contato, pois este número não está disponível para
+                atendimento e não haverá retorno.
+            </p>
 
-            <!-- =================================================
-                 CONFIRMAÇÃO
-            ================================================== -->
 
 
             <button
                 type="button"
-                class="secondary donation-confirm-button"
+                class="donation-button donation-confirm-button"
                 id="pixDoneButton"
+                style="margin-top: 18px;"
             >
-
-                JÁ REALIZEI O PIX
-                <b>✓</b>
-
+                JÁ REALIZEI O PIX ✓
             </button>
 
 
-        </div>
-
-
-    </section>
+        </section>
 
 
 
-    <!-- =====================================================
-         AGRADECIMENTO APÓS O PIX
-    ====================================================== -->
+        <!-- =================================================
+             AGRADECIMENTO — aparece depois da confirmação
+        ================================================== -->
 
 
-    <section
-        class="donation-success"
-        id="donationSuccess"
-        style="display: none;"
-    >
+        <section class="donation-success" id="donationSuccess" style="display: none;">
 
+            <p class="eyebrow">
+                Com carinho, obrigado
+            </p>
 
-        <p class="eyebrow">
-            COM CARINHO, OBRIGADO
-        </p>
+            <h2>
+                Seu apoio<br>
+                <span>significa muito.</span>
+            </h2>
 
+            <p>
+                Obrigado por contribuir com o
+                <strong>Blue Lock: World Challenge.</strong>
 
-        <h2>
+                <br><br>
 
-            SEU APOIO<br>
+                Este projeto é feito com dedicação e carinho
+                por fãs. Saber que existem pessoas dispostas
+                a apoiar essa jornada torna todo esse esforço
+                ainda mais especial.
 
-            <span>
-                SIGNIFICA MUITO.
-            </span>
+                <br><br>
 
-        </h2>
+                Esperamos continuar trazendo novos capítulos,
+                ideias e histórias para todos que acompanham
+                o World Challenge.
 
+                <br><br>
 
-        <p>
+                <strong>
+                    Obrigado por fazer parte dessa jornada. 💙
+                </strong>
+            </p>
 
-            Obrigado por contribuir com o
-            <strong>Blue Lock: World Challenge.</strong>
-
-            <br><br>
-
-            Este projeto é feito com dedicação e carinho
-            por fãs. Saber que existem pessoas dispostas
-            a apoiar essa jornada torna todo esse esforço
-            ainda mais especial.
-
-            <br><br>
-
-            Esperamos continuar trazendo novos capítulos,
-            ideias e histórias para todos que acompanham
-            o World Challenge.
-
-            <br><br>
-
-            <strong>
-                Obrigado por fazer parte dessa jornada. 💙
-            </strong>
-
-        </p>
-
-
-    </section>
+        </section>
 
 
 
-    <!-- =====================================================
-         MENSAGEM FINAL
-    ====================================================== -->
+        <!-- =================================================
+             MENSAGEM FINAL — sempre visível,
+             logo abaixo da área de doação
+        ================================================== -->
 
 
-    <section
-        class="donation-thanks"
-        id="donationThanks"
-        style="display: none;"
-    >
+        <section class="donation-thanks">
+
+            <p class="eyebrow">
+                Obrigado
+            </p>
+
+            <h2>
+                Mesmo que você<br>
+                não doe.
+            </h2>
+
+            <p>
+                Ler, compartilhar, acompanhar os capítulos
+                e falar sobre o projeto já ajuda muito.
+
+                <br><br>
+
+                Cada pessoa que chega até aqui faz parte
+                dessa jornada.
+            </p>
+
+        </section>
 
 
-        <p class="eyebrow">
-            OBRIGADO
-        </p>
-
-
-        <h2>
-            MESMO QUE VOCÊ<br>
-            NÃO DOE.
-        </h2>
-
-
-        <p>
-
-            Ler, compartilhar, acompanhar os capítulos
-            e falar sobre o projeto já ajuda muito.
-
-            <br><br>
-
-            Cada pessoa que chega até aqui faz parte
-            dessa jornada.
-
-        </p>
-
-
-    </section>
+    </div>
 
 
 </main>
@@ -581,16 +342,71 @@
 
 <footer>
 
+    <div class="footer-inner">
 
-    <span>
-        BLUE LOCK: WORLD CHALLENGE
-    </span>
+        <div class="footer-brand">
+
+            <a class="brand" href="index.html">
+                BLUE<b>LOCK</b>
+                <small>WORLD CHALLENGE</small>
+            </a>
+
+            <p>
+                Projeto fan-made brasileiro, criado como homenagem
+                ao universo de Blue Lock. Leitura gratuita.
+            </p>
+
+        </div>
 
 
-    <span>
-        FAN MADE PROJECT
-    </span>
+        <div class="footer-col">
 
+            <h4>NAVEGAR</h4>
+
+            <a href="index.html">Início</a>
+
+            <a href="idiomas.html">Capítulos</a>
+
+            <a href="obra.html">A obra</a>
+
+            <a href="sobre.html">Sobre</a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4>IDIOMAS</h4>
+
+            <a href="capitulos-pt.html">Português</a>
+
+            <a href="capitulos-en.html">English</a>
+
+            <a href="capitulos-es.html">Español</a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4>APOIAR</h4>
+
+            <a href="doacao.html">Doação</a>
+
+            <a href="redes.html">Redes e contato</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>BLUE LOCK: WORLD CHALLENGE</span>
+
+        <span>FAN MADE PROJECT</span>
+
+    </div>
 
 </footer>
 
@@ -598,147 +414,90 @@
 
 <script>
 
+const donationForm = document.getElementById("donationForm");
 
-const donationForm =
-    document.getElementById("donationForm");
+const pixSection = document.getElementById("pixSection");
 
+const copyPixButton = document.getElementById("copyPixButton");
 
-const pixSection =
-    document.getElementById("pixSection");
+const pixKey = document.getElementById("pixKey");
 
+const copyMessage = document.getElementById("copyMessage");
 
-const copyPixButton =
-    document.getElementById("copyPixButton");
+const pixDoneButton = document.getElementById("pixDoneButton");
 
-
-const pixKey =
-    document.getElementById("pixKey");
-
-
-const copyMessage =
-    document.getElementById("copyMessage");
-
-
-const pixDoneButton =
-    document.getElementById("pixDoneButton");
-
-
-const donationSuccess =
-    document.getElementById("donationSuccess");
-
-
-const donationThanks =
-    document.getElementById("donationThanks");
-
+const donationSuccess = document.getElementById("donationSuccess");
 
 
 /* =========================================================
-   CONTINUAR → MOSTRAR PIX
+   CONTINUAR -> MOSTRAR PIX
    ========================================================= */
 
-
-donationForm.addEventListener("submit", function(event) {
+donationForm.addEventListener("submit", function (event) {
 
     event.preventDefault();
 
-
     pixSection.style.display = "block";
 
-
-    pixSection.scrollIntoView({
-
-        behavior: "smooth",
-
-        block: "start"
-
-    });
+    pixSection.scrollIntoView({ behavior: "smooth", block: "start" });
 
 });
-
 
 
 /* =========================================================
    COPIAR CHAVE PIX
    ========================================================= */
 
+copyPixButton.addEventListener("click", async function () {
 
-copyPixButton.addEventListener("click", async function() {
-
-
-    const key =
-        pixKey.textContent.trim();
-
+    const key = pixKey.textContent.trim();
 
     try {
 
-
         await navigator.clipboard.writeText(key);
-
 
         copyMessage.style.display = "block";
 
+        copyPixButton.innerHTML = "CHAVE COPIADA ✓";
 
-        copyPixButton.innerHTML =
-            "CHAVE COPIADA <b>✓</b>";
+        setTimeout(function () {
 
+            copyMessage.style.display = "none";
 
-        setTimeout(function() {
-
-
-            copyMessage.style.display =
-                "none";
-
-
-            copyPixButton.innerHTML =
-                "COPIAR CHAVE PIX <b>⧉</b>";
-
+            copyPixButton.innerHTML = "COPIAR CHAVE PIX ⧉";
 
         }, 2500);
 
-
     } catch (error) {
-
 
         alert(
             "Não foi possível copiar automaticamente. Copie a chave manualmente."
         );
 
-
     }
 
-
 });
-
 
 
 /* =========================================================
-   JÁ REALIZEI O PIX → AGRADECIMENTO
+   JÁ REALIZEI O PIX -> AGRADECIMENTO
    ========================================================= */
 
-
-pixDoneButton.addEventListener("click", function() {
-
+pixDoneButton.addEventListener("click", function () {
 
     donationSuccess.style.display = "block";
 
-
-    donationThanks.style.display = "block";
-
-
-    donationSuccess.scrollIntoView({
-
-        behavior: "smooth",
-
-        block: "center"
-
-    });
-
+    donationSuccess.scrollIntoView({ behavior: "smooth", block: "center" });
 
 });
 
-
 </script>
 
+
+
+<script src="tema.js"></script>
+
+<script src="popup-doacao.js"></script>
 
 </body>
 

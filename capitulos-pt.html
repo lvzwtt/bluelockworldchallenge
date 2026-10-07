@@ -7,172 +7,249 @@
 
     <title>Capítulos — Blue Lock: World Challenge</title>
 
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilo.css?v=1">
 </head>
 
 <body>
 
 <header class="topbar">
 
-    <a class="brand" href="index.html">
-        <span>BLUE LOCK</span>
-        <small>WORLD CHALLENGE</small>
-    </a>
+    <div class="topbar-inner">
 
-    <nav>
-
-        <a href="index.html">
-            INÍCIO
+        <a class="brand" href="index.html">
+            BLUE<b>LOCK</b>
+            <small>WORLD CHALLENGE</small>
         </a>
 
-        <a class="active" href="capitulos-pt.html">
-            CAPÍTULOS
-        </a>
+        <nav>
 
-        <a href="sobre.html">
-            SOBRE
-        </a>
+            <a href="index.html">Início</a>
 
-        <a href="redes.html">
-            REDES
-        </a>
+            <a href="idiomas.html" class="active">Capítulos</a>
 
-    </nav>
+            <a href="obra.html">A obra</a>
+
+            <a href="sobre.html">Sobre</a>
+
+            <a href="redes.html">Redes</a>
+
+            <a href="doacao.html">Doação</a>
+
+        </nav>
+
+        <div class="header-tools">
+
+            <button class="icon-btn" type="button" data-tema-toggle title="Alternar modo claro e escuro">☀</button>
+
+            <span class="lang-switch">
+
+                <a href="capitulos-pt.html" title="Português">PT</a>
+
+                <a href="capitulos-en.html" title="English">EN</a>
+
+                <a href="capitulos-es.html" title="Español">ES</a>
+
+            </span>
+
+        </div>
+
+    </div>
 
 </header>
 
 
-<main class="chapter-page">
+<main>
 
-    <section class="chapter-header">
+    <section class="page-head">
 
-        <p class="eyebrow">
-            WORLD CHALLENGE
-        </p>
+        <span class="kicker">Blue Lock: World Challenge</span>
 
         <h1>
-            CAPÍTULOS
+            Capítulos
         </h1>
 
         <p>
-            Acompanhe todos os capítulos de
-            <strong>Blue Lock: World Challenge.</strong>
+            Acompanhe todos os capítulos de <strong>Blue Lock: World Challenge</strong> em português.
         </p>
 
     </section>
 
 
-    <section class="chapter-list-page">
+
+    <section class="search-bar">
+
+        <form class="search-form" id="buscaForm">
+
+            <span>⌕</span>
+
+            <input
+                type="text"
+                id="buscaCampo"
+                placeholder="Buscar capítulo por nome ou número..."
+                autocomplete="off"
+            >
+
+            <button type="submit">
+                Buscar
+            </button>
+
+        </form>
+
+        <div class="search-result" id="buscaResultado"></div>
+
+    </section>
 
 
-        <!-- =========================================
-             CAPÍTULO 01
-        ========================================== -->
 
-        <a
-            class="chapter-row"
-            href="capitulo01.html"
-        >
+    <section class="chapter-list">
 
-            <span class="chapter-number">
-                01
-            </span>
 
-            <div class="chapter-info">
+        <a class="chapter-row" href="capitulo01.html" data-capitulo="capítulo 01 título do capítulo 1">
 
-                <strong>
-                    CAPÍTULO 01
-                </strong>
+            <span>
 
-                <small>
+                <span class="cap-num">
+                    Capítulo 01
+                </span>
+
+                <span class="cap-sub">
                     Título do capítulo
-                </small>
+                </span>
 
-            </div>
+                <span class="tag-new">
+                    NOVO
+                </span>
 
-            <span class="chapter-arrow">
-                →
             </span>
+
+            <span class="cap-go">→</span>
 
         </a>
 
 
 
-        <!-- =========================================
-             CAPÍTULO 02 — EM BREVE
-        ========================================== -->
+        <div class="chapter-row disabled" data-capitulo="capítulo 02 em breve 2">
 
-        <div class="chapter-row disabled">
+            <span>
 
-            <span class="chapter-number">
-                02
+                <span class="cap-num">
+                    Capítulo 02
+                </span>
+
+                <span class="cap-sub">
+                    Em breve
+                </span>
+
             </span>
 
-            <div class="chapter-info">
-
-                <strong>
-                    CAPÍTULO 02
-                </strong>
-
-                <small>
-                    EM BREVE
-                </small>
-
-            </div>
-
-            <span class="chapter-arrow">
-                —
-            </span>
+            <span class="cap-go">—</span>
 
         </div>
 
 
 
-        <!-- =========================================
-             CAPÍTULO 03 — EM BREVE
-        ========================================== -->
+        <div class="chapter-row disabled" data-capitulo="capítulo 03 em breve 3">
 
-        <div class="chapter-row disabled">
+            <span>
 
-            <span class="chapter-number">
-                03
+                <span class="cap-num">
+                    Capítulo 03
+                </span>
+
+                <span class="cap-sub">
+                    Em breve
+                </span>
+
             </span>
 
-            <div class="chapter-info">
-
-                <strong>
-                    CAPÍTULO 03
-                </strong>
-
-                <small>
-                    EM BREVE
-                </small>
-
-            </div>
-
-            <span class="chapter-arrow">
-                —
-            </span>
+            <span class="cap-go">—</span>
 
         </div>
+
 
     </section>
 
 </main>
 
 
+
 <footer>
 
-    <span>
-        BLUE LOCK: WORLD CHALLENGE
-    </span>
+    <div class="footer-inner">
 
-    <span>
-        FAN MADE PROJECT
-    </span>
+        <div class="footer-brand">
+
+            <a class="brand" href="index.html">
+                BLUE<b>LOCK</b>
+                <small>WORLD CHALLENGE</small>
+            </a>
+
+            <p>
+                Projeto fan-made brasileiro, criado como homenagem
+                ao universo de Blue Lock. Leitura gratuita.
+            </p>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4>NAVEGAR</h4>
+
+            <a href="index.html">Início</a>
+
+            <a href="idiomas.html">Capítulos</a>
+
+            <a href="obra.html">A obra</a>
+
+            <a href="sobre.html">Sobre</a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4>IDIOMAS</h4>
+
+            <a href="capitulos-pt.html">Português</a>
+
+            <a href="capitulos-en.html">English</a>
+
+            <a href="capitulos-es.html">Español</a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4>APOIAR</h4>
+
+            <a href="doacao.html">Doação</a>
+
+            <a href="redes.html">Redes e contato</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>BLUE LOCK: WORLD CHALLENGE</span>
+
+        <span>FAN MADE PROJECT</span>
+
+    </div>
 
 </footer>
 
 
+<script src="tema.js"></script>
+
+<script src="busca.js"></script>
+
+<script src="popup-doacao.js"></script>
+
 </body>
+
 </html>
